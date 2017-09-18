@@ -13,94 +13,114 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\input{commands}
 
-\title{Your Paper}
-\author{You}
+\title{FCC Physics: Heavy resonances $\Zp$, RS graviton at $\sqrt{s} = 100 \TeV$}
+\author{Clement Helsens Michele Selvaggi, Rachel Smith, Ine Arts}
 
 \begin{document}
 \maketitle
+\tableofcontents
 
 \begin{abstract}
-Your abstract.
+This document presents a detailed study on the discovery potential of heavy gauge resonance $\Zp$ and 
+RS graviton in different decays.
 \end{abstract}
 
 \section{Introduction}
+This paper 
 
-Your introduction goes here! Some examples of commonly used commands and features are listed below, to help you get started. If you have a question, please use the help menu (``?'') on the top bar to search for help or ask us a question. 
+\section{FCC work flow}
+\subsection{Monte-Carlo production}
+All the signal Monte-Carlo events have been produced directly with Pythia 
 
-\section{Some examples to get started}
+\subsection{Detector parameterizations}
+The FCC study group is using the Delphes software package to emulate the response a detector. 
+For the FCC one the baseline parameters are:
+We also consider two variations around it as well as the CMS configuration.
 
-\subsection{How to include Figures}
 
-First you have to upload the image file from your computer using the upload link the project menu. Then use the includegraphics command to include it in your document. Use the figure environment and the caption command to add a number and a caption to your figure. See the code for Figure \ref{fig:frog} in this section for an example.
+\subsection{Multi-Variate based selection}
+When relevant, in some analyses, a Multi-Variate selection will be performed using the TMVA toolkit.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.3\textwidth]{frog.jpg}
-\caption{\label{fig:frog}This frog was uploaded via the project menu.}
+\subsection{Limit settings}
+
+
+\section{Physics models}
+
+Models with extended gauge groups often feature additional U(1) symmetries with corresponding heavy spin-1 bosons. These bosons, generally referred to as $\Zp$, would manifest as a narrow resonance through
+its  decay,  in  the  dilepton  mass  spectrum.   
+Among  these  models  are  those  inspired  by  Grand  Unified Theories, which are 
+motivated by gauge unification or a restoration of the left–right symmetry violated
+by the weak interaction. Examples are the $\Zp$
+bosons of the E6 motivated [1, 2] theories as well as Minimal models [3].  
+The Sequential Standard Model (SSM) [2] posits a $\ZpSSM$ boson with couplings to fermions
+that are identical to those of the SM $\Z$ boson. This model is a good benchmark as the 
+results can be interpreted in the context of other models of new physics, and is useful 
+for comparing the sensitivity of different experiments.
+
+
+
+\section{Analyses}
+\subsection{$\Zp \rightarrow ll$}
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{FCC_ptmu_1_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{FCC_ptmu_2_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{FCC_ptzp_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{FCC_mzp_sel0_nostack_log.png}
+\caption{Leading (top left) and sub-leading (top right) $\ptMu$, $\ptZp$ (bottom left) and 
+di-lepton invariant mass $\mll$ (bottom right) for the FCC 
+baseline detector}
+\label{fig:zpll_fcc}
 \end{figure}
 
-\subsection{How to add Comments}
 
-Comments can be added to your project by clicking on the comment icon in the toolbar above. % * <john.hammersley@gmail.com> 2016-07-03T09:54:16.211Z:
-%
-% Here's an example comment!
-%
-To reply to a comment, simply click the reply button in the lower right corner of the comment, and you can close them when you're done.
+\subsection{$\Zp \rightarrow ll$}
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{CMS_ptmu_1_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{CMS_ptmu_2_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{CMS_ptzp_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{CMS_mzp_sel0_nostack_log.png}
+\caption{Leading (top left) and sub-leading (top right) $\ptMu$, $\ptZp$ (bottom left) and 
+di-lepton invariant mass $\mll$ (bottom right) for the CMS  detector}
+\label{fig:zpll_cms}
+\end{figure}
 
-Comments can also be added to the margins of the compiled PDF using the todo command\todo{Here's a comment in the margin!}, as shown in the example on the right. You can also add inline comments:
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{lim_Zprime_ee_fcc_cms.png}
+\includegraphics[width=0.495\textwidth]{DiscoveryPotential_ee.eps}
+\caption{Limit versus mass (left) and luminosity for a $5\sigma$ discovery (right) for the
+ di-electron channel.}
+\label{fig:zpee_lim}
+\end{figure}
 
-\todo[inline, color=green!40]{This is an inline comment.}
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{lim_Zprime_mumu_fcc_cms.png}
+\includegraphics[width=0.495\textwidth]{DiscoveryPotential_mumu.eps}
+\caption{Limit versus mass (left) and luminosity for a $5\sigma$ discovery (right) for the
+ di-muon channel.}
+\label{fig:zpmumu_lim}
+\end{figure}
 
-\subsection{How to add Tables}
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{lim_Zprime_ll_fcc_cms.png}
+\includegraphics[width=0.495\textwidth]{DiscoveryPotential_ll.eps}
+\caption{Limit versus mass (left) and luminosity for a $5\sigma$ discovery (right) for the
+ di-lepton channel combined.}
+\label{fig:zpll_lim}
+\end{figure}
 
-Use the table and tabular commands for basic tables --- see Table~\ref{tab:widgets}, for example. 
+\subsection{$\Zp \rightarrow \ttbar$}
+\subsection{$G \rightarrow WW$}
+\section{Conclusion}
+This note presents preliminary studies of a search for $\Zp$ 
+bosons decaying into two electrons or muons in the FCC context. The expected number 
+of signal and background events have been estimated from simulated truth level information 
+after applying smearing functions to mimic the FCC detector response.
+Using a cut-based analysis and assuming simplistic systematic uncertainties, $\ZpSSM$
+masses below 40 $\TeV$ can be excluded at 95$\%$ C.L. 
+using 30 $\afb{}$ of data. 
 
-\begin{table}
-\centering
-\begin{tabular}{l|r}
-Item & Quantity \\\hline
-Widgets & 42 \\
-Gadgets & 13
-\end{tabular}
-\caption{\label{tab:widgets}An example table.}
-\end{table}
-
-\subsection{How to write Mathematics}
-
-\LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-\[S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i\]
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
-
-
-\subsection{How to create Sections and Subsections}
-
-Use section and subsections to organize your document. Simply use the section and subsection buttons in the toolbar to create them, and we'll handle all the formatting and numbering automatically.
-
-\subsection{How to add Lists}
-
-You can make lists with automatic numbering \dots
-
-\begin{enumerate}
-\item Like this,
-\item and like this.
-\end{enumerate}
-\dots or bullet points \dots
-\begin{itemize}
-\item Like this,
-\item and like this.
-\end{itemize}
-
-\subsection{How to add Citations and a References List}
-
-You can upload a \verb|.bib| file containing your BibTeX entries, created with JabRef; or import your \href{https://www.overleaf.com/blog/184}{Mendeley}, CiteULike or Zotero library as a \verb|.bib| file. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|.
-
-You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
-
-We hope you find Overleaf useful, and please let us know if you have any feedback using the help menu above --- or use the contact form at \url{https://www.overleaf.com/contact}!
-
-\bibliographystyle{alpha}
-\bibliography{sample}
-
+\bibliographystyle{plain}
+\bibliography{bibliography.bib}
 \end{document}
