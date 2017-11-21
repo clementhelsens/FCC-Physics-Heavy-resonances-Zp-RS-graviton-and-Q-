@@ -1,5 +1,4 @@
-\documentclass[a4paper]{article}
-
+\documentclass{cernrep}
 %% Language and font encodings
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -13,22 +12,33 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\pagestyle{plain}
 \input{commands}
 
-\title{FCC Physics: Heavy resonances $\Zp$, RS graviton at $\sqrt{s} = 100 \TeV$}
-\author{Clement Helsens Michele Selvaggi, Rachel Smith, Ine Arts}
-
 \begin{document}
-\maketitle
-\tableofcontents
+\title{FCC Physics: Heavy resonances $\Zp$, RS graviton at $\sqrt{s} = 100 \TeV$}
+\author{Clement Helsens${}^1$,\,
+Michele Selvaggi${}^1$,\,
+Rachel Smith${}^1$,\,
+Ine Arts${}^1$}
+\institute{${}^1$ CERN, Geneva, Switzerland}
+
 
 \begin{abstract}
-This document presents a detailed study on the discovery potential of heavy gauge resonance $\Zp$ and 
-RS graviton in different decays.
+This paper explores the physics reach of the proton-proton Future Circular Collider (FCC-hh)
+for searches of new particles decaying to two high energetic leptons, tops or W/Z boson. We discuss the expected exclusion limits and discovery potential for benchmark models 
+predicting new massive particles that result in resonant structures in
+the invariant mass spectrum. The study is based on the Madgraph5 and Pythia8 Monte Carlo generators using large event statistics for the FCC running conditions. 
+Its unprecedented  
+This document presents a detailed study on the discovery potential of heavy gauge resonance $\Zp$ and center of mass energy $\sqrt[]{s} =100$~TeV makes it the ultimate machine for such new particles, and are also extremely relevant to discuss the main limitations of the detector to tag high energetic top-quarks or W/Z bosons.
 \end{abstract}
+\keywords{CERN report; FCC.}
+\maketitle
+
+\tableofcontents
 
 \section{Introduction}
-This paper 
+The design of a 100 TeV proton-proton collider leads to many challenges for detector design. Detailed optimizations of the detector is needed in order to achieve the required physics goals. The capabilities of such a detector should include the capabilities of measuring multi-TeV leptons, top-quarks and bosons.
 
 \section{FCC work flow}
 \subsection{Monte-Carlo production}
@@ -64,10 +74,10 @@ for comparing the sensitivity of different experiments.
 \section{Analyses}
 \subsection{$\Zp \rightarrow ll$}
 \begin{figure}[!htb]\centering
-\includegraphics[width=0.495\textwidth]{FCC_ptmu_1_sel0_nostack_log.png}
-\includegraphics[width=0.495\textwidth]{FCC_ptmu_2_sel0_nostack_log.png}
-\includegraphics[width=0.495\textwidth]{FCC_ptzp_sel0_nostack_log.png}
-\includegraphics[width=0.495\textwidth]{FCC_mzp_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/FCC_ptmu_1_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/FCC_ptmu_2_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/FCC_ptzp_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/FCC_mzp_sel0_nostack_log.png}
 \caption{Leading (top left) and sub-leading (top right) $\ptMu$, $\ptZp$ (bottom left) and 
 di-lepton invariant mass $\mll$ (bottom right) for the FCC 
 baseline detector}
@@ -75,43 +85,48 @@ baseline detector}
 \end{figure}
 
 
-\subsection{$\Zp \rightarrow ll$}
 \begin{figure}[!htb]\centering
-\includegraphics[width=0.495\textwidth]{CMS_ptmu_1_sel0_nostack_log.png}
-\includegraphics[width=0.495\textwidth]{CMS_ptmu_2_sel0_nostack_log.png}
-\includegraphics[width=0.495\textwidth]{CMS_ptzp_sel0_nostack_log.png}
-\includegraphics[width=0.495\textwidth]{CMS_mzp_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/CMS_ptmu_1_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/CMS_ptmu_2_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/CMS_ptzp_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/CMS_mzp_sel0_nostack_log.png}
 \caption{Leading (top left) and sub-leading (top right) $\ptMu$, $\ptZp$ (bottom left) and 
 di-lepton invariant mass $\mll$ (bottom right) for the CMS  detector}
 \label{fig:zpll_cms}
 \end{figure}
 
 \begin{figure}[!htb]\centering
-\includegraphics[width=0.495\textwidth]{lim_Zprime_ee_fcc_cms.png}
-\includegraphics[width=0.495\textwidth]{DiscoveryPotential_ee.eps}
+\includegraphics[width=0.495\textwidth]{Fig/lim_Zprime_ee_fcc_cms.png}
+\includegraphics[width=0.495\textwidth]{Fig/DiscoveryPotential_ee.eps}
 \caption{Limit versus mass (left) and luminosity for a $5\sigma$ discovery (right) for the
  di-electron channel.}
 \label{fig:zpee_lim}
 \end{figure}
 
 \begin{figure}[!htb]\centering
-\includegraphics[width=0.495\textwidth]{lim_Zprime_mumu_fcc_cms.png}
-\includegraphics[width=0.495\textwidth]{DiscoveryPotential_mumu.eps}
+\includegraphics[width=0.495\textwidth]{Fig/lim_Zprime_mumu_fcc_cms.png}
+\includegraphics[width=0.495\textwidth]{Fig/DiscoveryPotential_mumu.eps}
 \caption{Limit versus mass (left) and luminosity for a $5\sigma$ discovery (right) for the
  di-muon channel.}
 \label{fig:zpmumu_lim}
 \end{figure}
 
 \begin{figure}[!htb]\centering
-\includegraphics[width=0.495\textwidth]{lim_Zprime_ll_fcc_cms.png}
-\includegraphics[width=0.495\textwidth]{DiscoveryPotential_ll.eps}
+\includegraphics[width=0.495\textwidth]{Fig/lim_Zprime_ll_fcc_cms.png}
+\includegraphics[width=0.495\textwidth]{Fig/DiscoveryPotential_ll.eps}
 \caption{Limit versus mass (left) and luminosity for a $5\sigma$ discovery (right) for the
  di-lepton channel combined.}
 \label{fig:zpll_lim}
 \end{figure}
 
 \subsection{$\Zp \rightarrow \ttbar$}
+
+Backgrounds: QCD, ttbar, single top, V+jets, VV. 
+
 \subsection{$G \rightarrow WW$}
+
+Backgrounds: QCD multijet, V+jets, VV.
+
 \section{Conclusion}
 This note presents preliminary studies of a search for $\Zp$ 
 bosons decaying into two electrons or muons in the FCC context. The expected number 
