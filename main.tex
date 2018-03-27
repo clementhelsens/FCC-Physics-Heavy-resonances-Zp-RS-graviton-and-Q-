@@ -18,14 +18,14 @@
 \begin{document}
 \title{FCC Physics: Heavy resonances $\Zp$, RS graviton at $\sqrt{s} = 100 \TeV$}
 \author{Clement Helsens${}^1$,\,
-David Jamin{}^1$,\,
-Michele Selvaggi${}^1$,\,
-Rachel Smith${}^1$,\,
-Ine Arts${}^1$}
+David Jamin${}^1$,\,
+Michele Selvaggi${}^1$}
 \institute{${}^1$ CERN, Geneva, Switzerland}
 
-di-jetdi-jet
-https://arxiv.org/pdf/1703.09127.pdf
+%di-jet
+%https://arxiv.org/pdf/1703.09127.pdf
+%ATLAS INT NOTE ttbar res 
+%https://cds.cern.ch/record/1640960/files/ATL-COM-PHYS-2014-003.pdf
 
 \begin{abstract}
 This paper explores the physics reach of the proton-proton Future Circular Collider (FCC-hh)
@@ -37,12 +37,6 @@ This document presents a detailed study on the discovery potential of heavy gaug
 \end{abstract}
 \keywords{CERN report; FCC.}
 \maketitle
-% * <clement.helsens@cern.ch> 2017-12-07T16:19:41.705Z:
-%
-% ^.
-% * <clement.helsens@cern.ch> 2017-12-07T16:19:40.450Z:
-%
-% ^.
 \tableofcontents
 
 \section{Introduction}
@@ -60,6 +54,54 @@ We also consider two variations around it as well as the CMS configuration.
 
 \subsection{Multi-Variate based selection}
 When relevant, in some analyses, a Multi-Variate selection will be performed using the TMVA toolkit.
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/variables_id_c1.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/variables_id_c2.eps}
+\caption{Input variables for top Vs QCD tagger.}
+\label{fig:TMVA_inputs_t}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/variables_id_c1.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/variables_id_c2.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/variables_id_c3.eps}
+\caption{Input variables for W Vs QCD tagger.}
+\label{fig:TMVA_inputs_t}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/CorrelationMatrixS.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/CorrelationMatrixB.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/CorrelationMatrixS.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/CorrelationMatrixB.eps}
+\caption{Correlation matrices for Signal (left) and Background (right) for top Vs QCD tagger (top) and W Vs QCD tagger (bottom).}
+\label{fig:TMVA_corr_matrix}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/overtrain_BDT_thad_vs_QCD.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/overtrain_BDT_Whad_vs_QCD.eps}
+\caption{BDT scores for Signal (red) and Background (blue) for top Vs QCD tagger (left) and W Vs QCD tagger (right).}
+\label{fig:TMVA_BDTscore}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/rejBvsS.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Whad_vs_QCD/rejBvsS.eps}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/effQCD_vs_effWhadBlue_thadRed_log.png}
+\caption{Top ROC curves show background rejection Vs Signal efficiency for top Vs QCD tagger (left) and W Vs QCD tagger (right). Bottom ROC curves show background efficiency Vs signal efficiency overlay for top Vs QCD tagger (red) and W Vs QCD tagger (blue).}
+\label{fig:TMVA_ROC}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Jet1_thad_vs_QCD_tagger.png}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Jet2_thad_vs_QCD_tagger.png}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Jet1_Whad_vs_QCD_tagger.png}
+\includegraphics[width=0.495\textwidth]{Fig/TMVA/Jet2_Whad_vs_QCD_tagger.png}
+\caption{Signal BDT score shapes comparison for masses from 10 to 35 $\TeV$ (and ratio to 20 $\TeV$ mass) for leading jet (left) and second leading jet $\pt$ (right) for top Vs QCD tagger (top) and W Vs QCD tagger (bottom).}
+\label{fig:BDT_signal_shape_comparison}
+\end{figure}
 
 \subsection{Limit settings}
 
@@ -131,9 +173,126 @@ di-lepton invariant mass $\mll$ (bottom right) for the CMS  detector}
 
 Backgrounds: QCD, ttbar, single top, V+jets, VV. 
 
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.8\textwidth]{Fig/Zptt/rapiditySeparation_sel0_nostack_log.png}
+\caption{Rapidity separation at preselection level before cut on this variable in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:Zptt_sel0_rapidity}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Jet1_trk02_SD_Cor_m_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Jet1_tau21_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Jet1_tau32_sel0_nostack_log.png}
+\caption{Variables used for the first step of cuts in cut-based analysis at preslection level for leading jet $\pT$ in $\Zp \rightarrow \ttbar$ analysis : jet mass SD (Soft-Dropped) corrected, jet $\tau_{21}$ and jet $\tau_{32}$. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:Zptt_sel0_cut}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Jet2_trk02_SD_Cor_m_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Jet2_tau21_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Jet2_tau32_sel0_nostack_log.png}
+\caption{Variables used for the first step of cuts in cut-based analysis at preslection level for second leading jet $\pT$ in $\Zp \rightarrow \ttbar$ analysis : jet mass SD (Soft-Dropped) corrected, jet $\tau_{21}$ and jet $\tau_{32}$. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:Zptt_sel1_cut}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/Jet1_thad_vs_QCD_tagger_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/Jet2_thad_vs_QCD_tagger_sel0_nostack_log.png}
+\caption{top Vs QCD tagger at preslection level for leading jet (left) and second leading jet $\pT$ (right) in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:Zptt_sel0_tagger}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/Jet1_trk02_SD_Cor_m_sel1_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/Jet2_trk02_SD_Cor_m_sel1_nostack_log.png}
+\caption{Jet mass SD (Soft-Dropped) corrected in anti-QCD tagger-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_sel1_tagger}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Mj1j2_pf08_MetCorr_sel4_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/Mj1j2_pf08_MetCorr_sel4_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/Mj1j2_pf08_MetCorr_sel2_nostack_log_TRFtag.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/Mj1j2_pf08_MetCorr_sel2_nostack_log_TRFtag.png}
+\caption{Zprime mass after the full selection for anaylsis cut-based (left) and anti-QCD tagger based (right), and for the two b-tagging scenarios : direct b-tag (top) and Tag Rate Function (bottom) in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:Zptt_mass_sel_final}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/lim_Zprime_tt_fcc_v02.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/cut/DiscoveryPotential_tt_rootStyle.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/lim_Zprime_tt_fcc_v02.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/DiscoveryPotential_tt_TC2_rootStyle.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/lim_Zprime_tt_fcc_v02_TRFtag.png}
+\includegraphics[width=0.495\textwidth]{Fig/Zptt/tagger/DiscoveryPotential_tt_TC2_rootStyle_TRFtag.png}
+\caption{Limit (left) and discovery potential for analysis cut-based (top), anti-QCD tagger-based (medium) and anti-QCD tagger-based with TRF b-tagging (bottom) in $\Zp \rightarrow \ttbar$ analysis.}
+\label{fig:Zptt_limit}
+\end{figure}
+
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.8\textwidth]{Fig/Zptt/tagger/DiscoveryPotential_tt_SSM_TC2_rootStyle_TRFtag.png}
+\caption{Discovery potential for anti-QCD tagger-based with TRF b-tagging (bottom) in $\Zp \rightarrow \ttbar$ analysis comparing TC2 (red) and SSM (blue) models.}
+\label{fig:Zptt_limit_TC2_SSM}
+\end{figure}
+
 \subsection{$G \rightarrow WW$}
 
 Backgrounds: QCD multijet, V+jets, VV.
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.8\textwidth]{Fig/RSGww/rapiditySeparation_sel0_nostack_log.png}
+\caption{Rapidity separation at preselection level before cut on this variable in $G \rightarrow WW$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_sel0_rapidity}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet1_trk02_SD_Cor_m_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet2_trk02_SD_Cor_m_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet1_tau21_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet2_tau21_sel0_nostack_log.png}
+\caption{Variables used for the first step of cuts in cut-based analysis at preslection level for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis : jet mass SD (Soft-Dropped) corrected (top) and jet $\tau_{21}$ (bottom). The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_sel0_cut}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet1_Flow45_sel1_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet2_Flow45_sel1_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet1_Flow55_sel1_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Jet2_Flow55_sel1_nostack_log.png}
+\caption{Variables used for the second step of cuts in cut-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis : jet Flow45 (top) and Flow55 (bottom). The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_sel1_cut}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/Jet1_Whad_vs_QCD_tagger_sel0_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/Jet2_Whad_vs_QCD_tagger_sel0_nostack_log.png}
+\caption{W Vs QCD tagger at preslection level for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_sel0_tagger}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/Jet1_trk02_SD_Cor_m_sel1_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/Jet2_trk02_SD_Cor_m_sel1_nostack_log.png}
+\caption{Jet mass SD (Soft-Dropped) corrected in anti-QCD tagger-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_sel1_tagger}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/Mj1j2_pf08_sel2_nostack_log.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/Mj1j2_pf08_sel2_nostack_log.png}
+\caption{RSG mass after the full selection for analysis cut-based (left) and anti-QCD tagger-based (right). The generated mass of the signal sample is 10 $\TeV$.}
+\label{fig:RSGww_mass_sel_final}
+\end{figure}
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/lim_RSGraviton_ww_fcc_v02.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/cut/DiscoveryPotential_ww_rootStyle.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/lim_RSGraviton_ww_fcc_v02.png}
+\includegraphics[width=0.495\textwidth]{Fig/RSGww/tagger/DiscoveryPotential_ww_rootStyle.png}
+\caption{Limit (left) and discovery potential for analysis cut-based (top) and anti-QCD tagger-based (bottom) in $G \rightarrow WW$ analysis.}
+\label{fig:RSWww_limit}
+\end{figure}
 
 \section{Conclusion}
 This note presents preliminary studies of a search for $\Zp$ 
