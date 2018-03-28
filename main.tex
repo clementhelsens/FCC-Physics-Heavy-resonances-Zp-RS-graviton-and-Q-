@@ -55,6 +55,16 @@ We also consider two variations around it as well as the CMS configuration.
 \subsection{Multi-Variate based selection}
 When relevant, in some analyses, a Multi-Variate selection will be performed using the TMVA toolkit.
 
+- design 2 taggers to perform Whad (p8\_pp\_RSGraviton\_20TeV\_ww VS ) and thad (p8\_pp\_Zprime\_20TeV\_ttbar) separation with QCD (p8\_pp\_jj\_lo)
+- made pythia independent samples from analysis, QCD has been produced to avoid useless events and to perform that the filtering has been chosen to ensure to have similar signal leading jet $\pT$ (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6.)
+- the statistics obtained for Whad, thad and QCD are respectively 1M, 1M and 920k events with 2 jets, each jet will be an entry for the BDT training,
+- the BDT parameters for training are : !H:!V:NTrees=600:MaxDepth=4:BoostType=AdaBoost:AdaBoostBeta=0.15:SeparationType=GiniIndex:nCuts=100:PruneMethod=NoPruning
+- a training selection is applied to remove uselees events with isolated leptons and jets for which jet $\tau$ ratio variables failed (i.e has a negative value)
+- the training statistics obtained for Whad, thad and QCD are respectively 1117500, 1432192 and 1578098 jets, half of the stat is used for training and the other half for testing
+- the variables are defined to be the same as the ones used to perform cut-based associated analysis ($\Zp \rightarrow \ttbar$ in section~\ref{subsec:Zptt} and $G \rightarrow WW$ in section~\ref{subsec:RSGww} ) and the idea is to fully exploit these informations thanks to the BDT, variable list and ranking in table
+
+- the BDT performances 
+
 \begin{figure}[!htb]\centering
 \includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/variables_id_c1.eps}
 \includegraphics[width=0.495\textwidth]{Fig/TMVA/thad_vs_QCD/variables_id_c2.eps}
@@ -170,6 +180,7 @@ di-lepton invariant mass $\mll$ (bottom right) for the CMS  detector}
 \end{figure}
 
 \subsection{$\Zp \rightarrow \ttbar$}
+\label{subsec:Zptt}
 
 Backgrounds: QCD, ttbar, single top, V+jets, VV. 
 
@@ -264,6 +275,7 @@ Backgrounds: QCD, ttbar, single top, V+jets, VV.
 \end{figure}
 
 \subsection{$G \rightarrow WW$}
+\label{subsec:RSGww}
 
 Backgrounds: QCD multijet, V+jets, VV.
 
