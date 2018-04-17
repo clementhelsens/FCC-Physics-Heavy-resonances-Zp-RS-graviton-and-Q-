@@ -53,9 +53,8 @@ We also consider two variations around it as well as the CMS configuration.
 
 
 \subsection{Multi-Variate based selection}
-When relevant, in some analyses, a Multi-Variate selection will be performed using the TMVA toolkit.
-
-- design 2 taggers to perform Whad (p8\_pp\_RSGraviton\_20TeV\_ww VS ) and thad (p8\_pp\_Zprime\_20TeV\_ttbar) separation with QCD (p8\_pp\_jj\_lo)
+- design 2 taggers to perform Whad (p8\_pp\_RSGraviton\_20TeV\_ww VS )
+and thad (p8\_pp\_Zprime\_20TeV\_ttbar) separation with QCD (p8\_pp\_jj\_lo)
 - made pythia independent samples from analysis, QCD has been produced to avoid useless events and to perform that the filtering has been chosen to ensure to have similar signal leading jet $\pT$ (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6.)
 - the statistics obtained for Whad, thad and QCD are respectively 1M, 1M and 920k events with 2 jets, each jet will be an entry for the BDT training,
 %- the BDT parameters for training are : !H:!V:NTrees=600:MaxDepth=4:BoostType=AdaBoost:AdaBoostBeta=0.15:SeparationType=GiniIndex:nCuts=100:PruneMethod=NoPruning
