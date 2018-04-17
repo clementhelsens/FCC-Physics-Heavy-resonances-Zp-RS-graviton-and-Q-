@@ -68,6 +68,7 @@ When relevant, in some analyses, a Multi-Variate selection will be performed usi
 - the BDT response has been shown (\ref{fig:BDT_signal_shape_comparison}) for different signal masses generation to see how much analysis can be mass dependent. From the cuts defined in the analysis level at 0.15, the BDT shape reponse difference is not changing so much the proportion of signal kept and it removes 90\% and 95\% of QCD for thad and Whad taggers respectively
 
 \begin{tabular}{|c|c|c|}
+\hline
 \hline			
  & Whad/QCD & thad/QCD \\
 \hline                        
@@ -84,7 +85,7 @@ train sel. &  \multicolumn{2}{c|}{no isolated leptons} \\
            &  \multicolumn{2}{c|}{$\tau_{32}>0$} \\
 \hline
 Train stat. signal (jets)     & 1117500 & 1432192  \\
-Train stat. background (jets) & \multicolumn{2}{c|}1578098{} \\
+Train stat. background (jets) & \multicolumn{2}{c|}{1578098} \\
 \hline
 BDT params  &  \multicolumn{2}{c|}{NTrees=600, MaxDepth=4, AdaBoost, AdaBoostBeta=0.15,} \\
             &  \multicolumn{2}{c|}{SeparationType=GiniIndex, nCuts=100, PruneMethod=NoPruning} \\
@@ -103,6 +104,7 @@ ranked variables & Jet\_trk02\_tau3 (0.12)        & Jet\_trk02\_tau1 (0.21) \\
                  & Jet\_trk02\_tau1 (0.05)        &  \\
                  & Jet\_trk02\_tau2 (0.04)        &  \\
                  & Jet\_trk02\_tau32 (0.02)       &  \\
+\hline
 \hline
 \label{tab:TMVA_summary}
 \end{tabular}
