@@ -43,17 +43,30 @@ This document presents a detailed study on the discovery potential of heavy gaug
 \section{Introduction}
 The design of a 100 TeV proton-proton collider leads to many challenges for detector design. Detailed optimizations of the detector is needed in order to achieve the required physics goals. The capabilities of such a detector should include the capabilities of measuring multi-TeV leptons, top-quarks and bosons.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{FCC work flow}
+\label{sec:fccworkflow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Monte-Carlo production}
+\label{subsec:mcprod}
+
 All the signal Monte-Carlo events have been produced directly with Pythia 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detector parameterizations}
+\label{subsec:detparam}
+
 The FCC study group is using the Delphes software package to emulate the response a detector. 
 For the FCC one the baseline parameters are:
 We also consider two variations around it as well as the CMS configuration.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Multi-Variate based selection}
+\label{subsec:mvatagger}
+
 - design 2 taggers to perform Whad and thad separation with QCD,
 - made pythia independent samples from analysis, QCD has been produced to avoid useless events and to perform that the filtering has been chosen to ensure to have similar signal leading jet $\pT$ (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6.)
 - the statistics obtained for Whad, thad and QCD are respectively 1M, 1M and 920k events with 2 jets, each jet will be an entry for the BDT training,
@@ -156,10 +169,20 @@ ranked variables & Jet\_trk02\_tau3 (0.12)        & Jet\_trk02\_tau1 (0.21) \\
 \label{fig:BDT_signal_shape_comparison}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tag Rate Function}
+\label{subsec:trf}
+get annexe from Clement and copy it here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limit settings}
+\label{subsec:limitsettings}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Physics models}
+\label{sec:physmodel}
 
 Models with extended gauge groups often feature additional U(1) symmetries with corresponding heavy spin-1 bosons. These bosons, generally referred to as $\Zp$, would manifest as a narrow resonance through
 its  decay,  in  the  dilepton  mass  spectrum.   
@@ -174,8 +197,21 @@ for comparing the sensitivity of different experiments.
 
 
 
-\section{Analyses}
-\subsection{$\Zp \rightarrow ll$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analyses at $100 TeV FCC-hh$}
+\label{sec:ana100tev}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Leptonic resonances}
+\label{subsec:lepreso}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$\Zp \rightarrow ll$}
+\label{subsubsec:Zpll}
+
 \begin{figure}[!htb]\centering
 \includegraphics[width=0.495\textwidth]{Fig/FCC_ptmu_1_sel0_nostack_log.png}
 \includegraphics[width=0.495\textwidth]{Fig/FCC_ptmu_2_sel0_nostack_log.png}
@@ -222,8 +258,24 @@ di-lepton invariant mass $\mll$ (bottom right) for the CMS  detector}
 \label{fig:zpll_lim}
 \end{figure}
 
-\subsection{$\Zp \rightarrow \ttbar$}
-\label{subsec:Zptt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$\Zp \rightarrow \mu\mu flavour anomaly$}
+\label{subsubsec:Zpmumuflavano}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$\Zp \rightarrow \tau\tau$}
+\label{subsubsec:Zptautau}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hadronic resonances}
+\label{subsec:hadreso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\sububsection{$\Zp \rightarrow \ttbar$}
+\label{subsubsec:Zptt}
 
 Backgrounds: QCD, ttbar, single top, V+jets, VV. 
 
@@ -390,8 +442,9 @@ signal $m_{Z}$= & 10 TeV        & 10241.2 (15357) & 18310.2 (27441) & 9272.5 (41
 \end{figure}
 
 
-\subsection{$G \rightarrow WW$}
-\label{subsec:RSGww}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$G \rightarrow WW$}
+\label{subsubsec:RSGww}
 
 Backgrounds: QCD multijet, V+jets, VV.
 
@@ -483,6 +536,19 @@ signal $m_{G}$= & 10 TeV        & 47782.9 (170178)      & 20640.8 (73404)   & 70
 \label{fig:RSWww_limit}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{$Q^{*} \rightarrow jj$}
+\label{subsubsec:Qstarjj}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analyses at $27 TeV HE-HLC$}
+\label{sec:ana27tev}
+- explain diff of the analysis with 100 TeV and show final plots as in Yellow report.
+- add section for different models study
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion}
 This note presents preliminary studies of a search for $\Zp$ 
 bosons decaying into two electrons or muons in the FCC context. The expected number 
