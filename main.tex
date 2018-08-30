@@ -16,6 +16,15 @@
 \pagestyle{plain}
 \input{commands}
 
+
+
+\newcommand*{\Zptata}{\ensuremath{Z^{\prime}\rightarrow \tau\tau}}
+\newcommand*{\Zpee}{\ensuremath{Z^{\prime}\rightarrow \text{e e}}}
+\newcommand*{\Zpmumu}{\ensuremath{Z^{\prime}\rightarrow \mu\mu}}
+\newcommand*{\Zpll}{\ensuremath{Z^{\prime}\rightarrow \ell\ell}}
+\newcommand*{\Zptt}{\ensuremath{Z^{\prime}\rightarrow \ttbar}}
+\newcommand*{\hht}{\ensuremath{H_{\ensuremath{T}}}}
+
 \begin{document}
 \title{FCC Physics: Heavy resonances $\Zp$, RS graviton at $\sqrt{s} = 100 \TeV$}
 \author{Clement Helsens${}^1$,\,
@@ -47,6 +56,25 @@ The design of a 100 TeV proton-proton collider leads to many challenges for dete
 \section{FCC work flow}
 \subsection{Monte-Carlo production}
 All the signal Monte-Carlo events have been produced directly with Pythia 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Fit model}
+Despite the fact that very large amount of Monte-Carlo statistic has been simulated in bins of $\hht$, there are still large statistical fluctuations from high weight events.
+In order to reduce this effect, a function is used to fit the background distribution,
+\begin{equation}
+f(z)=p_1(1-z)^{p_2}z^{p_3}z^{p_{4}logz}
+\end{equation}
+where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for the backgrounds, while the normalisation is taken prior to the fit (see figure~\ref{fig:hadronicresonances_nofit}).
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.45\columnwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_sel8_nostack_log.eps}
+\includegraphics[width=0.45\columnwidth]{Fig/Zptt/Zptt_QCD_sel8_Mj1j2_pf08_MetCorr_fit.eps}
+\caption{Invariant mass prior to fit.}
+\label{fig:hadronicresonances_nofit}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{Detector parameterizations}
 The FCC study group is using the Delphes software package to emulate the response a detector. 
@@ -493,6 +521,88 @@ signal $m_{G}$= & 10 TeV        & 47853.2 (170178)      & 20640.8 (73404)   & 70
 \caption{Limit (left) and discovery potential (right) for analysis cut-based (top) and anti-QCD tagger-based (bottom) in $G \rightarrow WW$ analysis.}
 \label{fig:RSWww_limit}
 \end{figure}
+
+
+\begin{table}[htbp]
+   \centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+  \hline
+  & \multicolumn{2}{c|}{di-jet}  & \multicolumn{2}{c|}{$\ttbar$} & \multicolumn{2}{c|}{WW} \\
+  \cline{2-7}
+
+ & pre-sel & final-sel  & pre-sel & final-sel & pre-sel & final-sel\\
+  \hline
+  di-jet & 385555434 &  373661126 &  154855591 & 11439.8&  154856148 & 64484\\
+  $\ttbar$ & - & - & 1114779 & 74193.6 &  1114779 & 3185\\
+  di-bosons & - & - &  41820 &  17.1 &  41820 & 6092\\
+  boson+jet & - & - & 1610472 & 264.1&  1610472 & 25377\\
+  \hline
+  total bkg  &  385555434& 373661126& 157622662 & 85914 & 154856148 & 99137\\
+  \hline
+  10~TeV &  - & - &  101529 & 15601 &  47853 & 15745\\
+  20~TeV &   1253072 &  1239813& 7774 & 500.6 & 1282 & 578\\
+  30~TeV &  69922 &  67488 & 485.2 & 13.2 &  61.4 & 30.1 \\
+  40~TeV &  4589 &  4373 & - & - & - & -\\
+  \hline
+\end{tabular}
+  \caption{Yields for the di-jet, $\ttbar$ and WW analyses after pre and final selection.}
+  \label{tab:hadronicresonances:yields}
+\end{table}
+
+
+\begin{table}[htbp]
+   \centering
+\begin{tabular}{l|r|r}
+ & ee & $\mu\mu$  \\
+  \hline
+  Drell-Yan & 206882.9 & 236597.9 \\
+  \hline
+  $\Zp$ 4~TeV & 1421357.9    & 1598969.4 \\
+  $\Zp$ 6~TeV & 349922.4  & 393117.6\\
+  $\Zp$ 8~TeV &   115043.5 & 129698.7 \\
+  $\Zp$ 10~TeV &  45423.5 & 50873.3 \\
+  $\Zp$ 20~TeV &  1192.3 & 1411.5\\
+  $\Zp$ 30~TeV &  88.2 & 107.6\\
+  $\Zp$ 40~TeV &  11.7 & 14.1 \\
+  $\Zp$ 50~TeV &  3.2 & 3.7\\
+\end{tabular}
+  \caption{Expected number of events for the \Zpee\ and \Zpmumu\ analysis after the full event selection for the various \Zp\ mass hypotheses}
+  \label{tab:leptonicresonances:yieldsll}
+\end{table}
+
+\begin{table}[htbp]
+   \centering
+\begin{tabular}{l| r |r|r}
+$\Zp$ mass [TeV]  & signal &  Drell-Yan & Di-jet \\
+  \hline
+  $4$     &  51479.5 &  \multirow{3}{*}{5669.2} &   \multirow{3}{*}{875561.7} \\
+  $6$     &  22294.3  & &\\
+  $8$     &  9140.7  &  &\\
+  \hline
+
+  $10$      & 5398.8 & 9008.3 & 2040422.6 \\
+  \hline
+
+  $12$ &  2261.4&  \multirow{3}{*}{8946.8} &  \multirow{3}{*}{1982792.8}  \\
+  $14$ &  1040.9&  &  \\
+  \hline
+
+  $16$ &  489.6&  \multirow{3}{*}{8826.3} &  \multirow{3}{*}{1915211.5} \\
+  $18$ &  251.9&  &  \\
+    \hline
+
+  $20$    &  122.6& \multirow{3}{*}{7777.2} & \multirow{3}{*}{1609435.6}   \\
+  $25$    &  27.5 &  &  \\
+  $30$    &  7.1 &  &  \\
+\end{tabular}
+  \caption{Expected number of events for the \Zptata\ analysis after the full event selection for the various \Zp\ mass hypotheses}
+  \label{tab:leptonicresonances:yieldstautau}
+\end{table}
+
+
+
+
+
 
 \clearpage
 \newpage
