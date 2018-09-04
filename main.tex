@@ -237,7 +237,36 @@ ranked variables & Jet\_trk02\_tau3 (0.12)        & Jet\_trk02\_tau1 (0.21) \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Tag Rate Function}
 \label{subsec:trf}
-get annexe from Clement and copy it here.
+The modeling of the backgrounds in the high tagging regimes is a challenging task. 
+The requirement of $b$ tagging in some MC samples can drastically reduce the available statistics.
+This shortage of events that pass the $b$-tagging cut in the signal regime, in conjunction with the large cross section of some of the backgrounds can lead to very spiky templates. 
+
+To overcome this problem the tag rate function (TRF) method is introduced. 
+By using the TRF method, no event is cut based on its $b$-tagging count, but instead all the events are weighted.
+This weight can be interpreted as the probability of the given event to contain the desired number of $b$ jets. 
+To achieve this, the tagging efficiency (a function of $\eta$, $\pt$ and true jet flavour) was
+used to calculate the event weight based on the kinematics and flavour of the jets found in each event.
+
+Given a jet with $\eta$, $\pt$ and flavour $f$, its tagging probability can be noted as:
+\begin{equation*}
+	\varepsilon \left(f,|\eta|,\pt\right)
+\end{equation*}
+
+For a given event with $N$ jets, its probability of containing exactly one $b$-tag jet can be computed as:
+\begin{equation*}
+	P_{=1} = \sum\limits_{i=1}^N \left( \varepsilon_{i} \prod\limits_{i \neq j} \left( 1 - \varepsilon_{j} \right) \right)
+\end{equation*}
+
+In the same way, it can be used to compute the probability for inclusive $b$-tag selections:
+\begin{align*}
+	P_{=0} &= \prod\limits_{i=1}^N \left( 1 - \varepsilon_{j} \right) \\
+	P_{\geq 1} &= 1 - P_{=0}
+\end{align*}
+
+
+
+It was verify that the TRF methods agrees well with the direct tagging.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limit settings}
