@@ -474,6 +474,7 @@ The discovery potential for high mass resonances decaying to $ee$, $\mu\mu$ and 
 
 \subsubsection{$\mu\mu$ non-resonant interpretations}
 Flavour anomaly model and t-channel LQ interpretations from 1710.06363 ref. Few lines to explain same selection as Zprimemumu and put plots for final sel+limit+disco.
+selection diff wrt Z'mumu : leton pT > 1 -> 1.2TeV
 
 \begin{figure}
   \centering
@@ -489,7 +490,7 @@ Flavour anomaly model and t-channel LQ interpretations from 1710.06363 ref. Few 
   \includegraphics[width=0.3\columnwidth]{Fig/mlq_sel0_nostack_log.eps}
   \includegraphics[width=0.3\columnwidth]{Fig/lim_LQ_mumu_fcc_v02.eps}
   \includegraphics[width=0.3\columnwidth]{Fig/DiscoveryPotential_LQ_mumu_rootStyle.eps}
-  \caption{Left : Invariant mass for a 30~TeV signal after full event selection in flavour anomaly scenario. Limit versus mass (middle) and luminosity for a $5\sigma$ discovery (right) comparing ee,$\mu\mu$ and combined channels. }
+  \caption{Left : Invariant mass for a 30~TeV signal after full event selection in t-channel LQ scenario. Limit versus mass (middle) and luminosity for a $5\sigma$ discovery (right) comparing ee,$\mu\mu$ and combined channels. }
   \label{figure:leptonicresonances:resultsmumu_lq}
 \end{figure}
 
@@ -856,8 +857,76 @@ signal $m_{G}$= & 10 TeV        & 47853.2 (170178)      & 20640.8 (73404)   & 70
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Comparison with $27 TeV HE-HLC$}
 \label{sec:ana27tev}
-- explain diff of the analysis with 100 TeV and show final plots as in Yellow report.
-- add section for different models study
+
+Zpll -> ee mumu
+leton pT > 1TeV -> 0.5 TeV
+mZ' > 2.5 TeV -> 1 TeV
+
+mumu flav ano
+leton pT > 1.2TeV -> 0.75 TeV
+
+Zptautau
+optimal cuts changed as shown in Table~\cite{tab:leptonicresonances:selectiontautau27}
+
+\begin{table}[htbp]
+   \centering
+\begin{tabular}{l|l|c|r}
+   $\Zp$ mass [TeV] &  $\Delta \phi(\tau_1, \tau_2)$&  $\Delta R(\tau_1, \tau_2)$ & $\met$\\
+  \hline
+   $2$ & > 2.4 & > 2.4 and < 3.9 & > 80 GeV\\
+   $4$ & > 2.4 & > 2.7 and < 4.4 & > 80 GeV\\
+   $6$ & > 2.4 & > 2.9 and < 4.4 & > 80 GeV\\
+   $8$ & > 2.6 & > 2.9 and < 4.6 & > 80 GeV\\
+  $10$ & > 2.8 & > 2.9 and < 4.1 & > 60 GeV\\
+  $12$ & > 2.8 & > 3.0 and < 3.6 & > 60 GeV\\
+  $14$ & > 3.0 & > 3.0 and < 3.3 & > 60 GeV\\
+  \end{tabular}
+  \caption{List of mass dependent cuts optimised to maximise the sensitivity for the \Zptata\ search.}
+  \label{tab:leptonicresonances:selectiontautau27}
+\end{table}
+
+RSGWW
+$Jet1_trk02_SD_Corr_pt$ > 3 TeV -> 1 TeV
+
+Zptt
+$Jet1_trk02_SD_Corr_pt$ > 3 TeV -> 1 TeV
+
+qq
+$Jet1_calo04_pt$ > 3 TeV -> 1 TeV
+
+
+\begin{table}[!htb]\centering
+\scalebox{0.9}{
+\begin{tabular}{|c|c|c|}
+\hline
+\hline
+analysis   & HE-LHC & FCC-hh \\
+\hline
+\hline
+Zpll       & 13 TeV & 40 TeV \\
+           & 11 TeV & 43 TeV \\
+\hline
+Zptautau   &  6 TeV & 14 TeV \\
+           &  6 TeV & 18 TeV \\
+\hline
+Zpmumuflav &  4 TeV & 25 TeV \\
+           &  2 TeV & 19 TeV \\
+\hline
+Zptt       & 10 TeV & 28 TeV \\
+           &  8 TeV & 23 TeV \\
+\hline
+RSGWW      &  8 TeV & 28 TeV \\
+           &  7 TeV & 22 TeV \\
+\hline
+Q*qq       & 14 TeV & 43 TeV \\
+           & 12 TeV & 40 TeV \\
+\hline
+\hline
+\end{tabular}}
+\caption{Limit (first number) and discovery reach at 5 $\sigma$ (second number) comparison between HE-LHC (27 TeV 15 ab-1) and FCC-hh (100 TeV 30 ab-1).}
+\label{tab:27vs100}
+\end{table}
+
 
 \begin{figure}
   \centering
@@ -868,6 +937,128 @@ signal $m_{G}$= & 10 TeV        & 47853.2 (170178)      & 20640.8 (73404)   & 70
   \label{figure:leptonicresonances27:masses}
 \end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\columnwidth]{Fig/27tev/lim_Zprime_ll_helhc_v01_allxs.eps}
+  \includegraphics[width=0.45\columnwidth]{Fig/27tev/DiscoveryPotential_ll_comb_rootStyle.eps}
+  \caption{Limit versus mass for the di-lepton (ee,$\mu\mu$) channel (left) and luminosity for a $5\sigma$ discovery (right) comparing ee,$\mu\mu$ and combined channels. }
+  \label{figure:leptonicresonances27:resultsll}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\columnwidth]{Fig/27tev/lim_Zprime_tautau_helhc_v01.eps}
+    \includegraphics[width=0.45\columnwidth]{Fig/27tev/DiscoveryPotential_tautau_rootStyle.eps}
+  \caption{Limit versus mass for the di-tau channel (left) and luminosity for a $5\sigma$ discovery (right). }
+  \label{figure:leptonicresonances27:resultstautau}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.3\columnwidth]{Fig/27tev/mzp_sel0_nostack_log.eps}
+  \includegraphics[width=0.3\columnwidth]{Fig/27tev/lim_Zprime_mumu_ano_helhc_v01.eps}
+  \includegraphics[width=0.3\columnwidth]{Fig/27tev/DiscoveryPotential_mumu_rootStyle.eps}
+  \caption{Left : Invariant mass for a 6~TeV signal after full event selection in flavour anomaly scenario. Limit versus mass (middle) and luminosity for a $5\sigma$ discovery (right) comparing ee,$\mu\mu$ and combined channels. }
+  \label{figure:leptonicresonances27:resultsmumu_flav}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/Zptt_Mj1j2_pf08_MetCorr_fit_sel8_nostack_log.eps}
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/lim_Zprime_tt_helhc_v01.eps}
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/DiscoveryPotential_tt_SSM_TC2_tagger_TRFbtag_rootStyle.eps}
+  \caption{Left distribution : invariant mass distribution of the two leading jets for the full selection for a 6~TeV signal for the \zptt\ analysis. Middle distribution : exclusion limit at 95\% CL versus heavy resonance mass. Right distribution : integrated luminosity for a $5\sigma$ discovery as a function of the heavy resonance mass.}
+  \label{figure:hadronicresonances27:ttsel08}
+\end{figure}
+
+\begin{table}[!htb]\centering
+\scalebox{0.9}{
+\begin{tabular}{|c|c|c|}
+\hline
+\hline
+signal $m_{Z}$  & 2 TeV  &    84.0 \\
+                & 4 TeV  &  4702.8 \\
+                & 6 TeV  &  1401.9 \\
+                & 8 TeV  &   215.5 \\
+                & 10 TeV &    27.6 \\
+                & 12 TeV &     3.8 \\
+                & 14 TeV &     0.8 \\
+\hline
+background      & vv     &     5.9 \\
+                & vj     &    45.7 \\
+                & tt     &   827.4 \\
+                & QCD    & 15909.0 \\
+                & total  & 16788.0 \\
+\hline
+\hline
+\end{tabular}}
+\caption{Final yield of analysis.}
+\label{tab:ZpttYield27}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/RSGWW_Mj1j2_pf08_fit_sel4_nostack_log.eps}
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/lim_RSGraviton_ww_helhc_v01.eps}
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/DiscoveryPotential_ww_tagger_rootStyle.eps}
+  \caption{Left distribution : invariant mass distribution of the two leading jets for the full selection for a 6~TeV signal for the \rsg\ analysis. Middle distribution : exclusion limit at 95\% CL versus heavy resonance mass. Right distribution : integrated luminosity for a $5\sigma$ discovery as a function of the heavy resonance mass.}
+  \label{figure:hadronicresonances27:wwsel04}
+\end{figure}
+
+\begin{table}[!htb]\centering
+\scalebox{0.9}{
+\begin{tabular}{|c|c|c|}
+\hline
+\hline
+signal $m_{RSG}$= & 2 TeV  &  284.6 \\
+                  & 4 TeV  &  789.7 \\
+                  & 6 TeV  &  245.7 \\
+                  & 8 TeV  &   49.0 \\
+                  & 10 TeV &    8.7 \\
+                  & 12 TeV &    1.4 \\
+                  & 14 TeV &    0.8 \\
+\hline
+background        & vv     &  302.3 \\
+                  & vj     &  794.4 \\
+                  & tt     &  516.3 \\
+                  & QCD    &  547.7 \\
+                  & total  & 2160.7 \\
+\hline
+\hline
+\end{tabular}}
+\caption{Final yield of $RSG \rightarrow WW$ analysis.}
+\label{tab:RSGwwYield27}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/qq_Mj1j2_pf04_sel1_nostack_log.eps}
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/lim_Qstar_jj_helhc_v01.eps}
+  \includegraphics[width=0.30\columnwidth]{Fig/27tev/DiscoveryPotential_jj_rootStyle.eps}
+  \caption{Left distribution : invariant mass distribution of the two leading jets for the full selection for a 6~TeV signal for the \qjj\ analysis. Middle distribution : exclusion limit at 95\% CL versus heavy resonance mass. Right distribution : integrated luminosity for a $5\sigma$ discovery as a function of the heavy resonance mass.}
+  \label{figure:hadronicresonances27:qqsel01}
+\end{figure}
+
+\begin{table}[!htb]\centering
+\scalebox{0.9}{
+\begin{tabular}{|c|c|c|}
+\hline
+\hline
+signal $m_{Q^{*}}$  & 2 TeV  &  116820015.2 \\
+                    & 4 TeV  &   45971584.5 \\
+                    & 6 TeV  &    5064345.4 \\
+                    & 8 TeV  &     596530.2 \\
+                    & 10 TeV &      76228.5 \\
+                    & 12 TeV &       9978.9 \\
+                    & 14 TeV &       1314.3 \\
+\hline
+background          & QCD    & 1144048231.4 \\
+\hline
+\hline
+\end{tabular}}
+\caption{Final yield of analysis.}
+\label{tab:qqYield27}
+\end{table}
 
 \clearpage
 \newpage
