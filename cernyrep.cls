@@ -119,7 +119,7 @@
 \renewcommand\headrulewidth{0pt}
 \cfoot{\thepage}
 \fancyhead[LO]{\truncate{.95\headwidth}{\leftmark}}
-\fancyhead[RE]{\textsc{Chapter\ \thechapter}}
+\fancyhead[R]{\textsc{Chapter\ \thechapter}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Chapter headings (when used should be like title)               %
