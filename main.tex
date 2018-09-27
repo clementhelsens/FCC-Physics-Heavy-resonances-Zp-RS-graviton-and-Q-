@@ -77,10 +77,10 @@ The design of a 100 TeV proton-proton collider leads to many challenges for dete
 \subsection{Monte-Carlo production}
 \label{subsec:mcprod}
 
-Monte Carlo~(MC) simulated event samples were used to simulate the response of the FCC detector to signal and backgrounds. The muon momentum resolution is assumed to be $\sigma(p)/p \approx 20\%$ at $\pt= 20 $TeV. Signals are generated with {\scshape Pythia}~8.230 (p8)~\cite{Sjostrand:2014zea} using the leading order cross-section from the generator.
+Monte Carlo~(MC) simulated event samples were used to simulate the response of the FCC detector to signal and backgrounds. The muon momentum resolution is assumed to be $\sigma(p)/p \approx 20\%$ at $\pt= 20 $TeV. Signals are generated with {\scshape Pythia}~8.230 ($p8$)~\cite{Sjostrand:2014zea} using the leading order cross-section from the generator.
 All lepton flavour decays of the $\ZpSSM$ are generated assuming universality of the couplings.
-The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$, which were generated using {\scshape MG5\_}a{\scshape MC@NLO}~2.5.2 (mg)~\cite{Alwall:2014} at leading order only. A k-factor of 2 is applied to all the background processes. \newline
-PYTHIA independent samples have been produced for Multi-Variate taggers training (section~\ref{subsec:mvatagger}). QCD has been produced to avoid useless events and to perform that the filtering has been chosen to ensure to have consistent leading jet $\pT$ as the signals considered (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6).\newline
+The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$, which were generated using {\scshape MG5\_}a{\scshape MC@NLO}~2.5.2 ($mg$)~\cite{Alwall:2014} at leading order only. A k-factor of 2 is applied to all the background processes. \newline
+PYTHIA independent samples have been produced for Multi-Variate taggers training (section~\ref{subsec:mvatagger}). QCD has been produced to avoid useless events thnaks to a filtering chosen to ensure to have consistent leading jet $\pT$ as the signals considered (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6).\newline
 Tables~\ref{tab:MCtable_bkgd} and ~\ref{tab:MCtable_sig} are summarising all the background and signal samples produced for the various analysis presented in this document.
 
 \begin{table}[!htb]\centering
@@ -89,17 +89,17 @@ Tables~\ref{tab:MCtable_bkgd} and ~\ref{tab:MCtable_sig} are summarising all the
 \hline		
 process & Ngen & generator & k-factor \\
 \hline		
-pp\_$ee$\_5f\_HT & $\sim$5M & mgp8 & 2 \\
-pp\_$\mu\mu$\_5f\_HT & $\sim$5M & mgp8 & 2 \\
-pp\_$\tau\tau$\_5f\_HT & $\sim$5M & mgp8 & 2 \\
-pp\_$jj$\_5f\_HT ($j$ = $u$, $d$, $c$, $s$ or $b$) & $\sim$5M & mgp8 & 2 \\
-pp\_$tt$\_5f\_HT & $\sim$5M & mgp8 & 2 \\
-pp\_$Vj$\_5f\_HT ($V$ = $W$ or $Z$ and $j$ = $u$, $d$, $c$, $s$ or $b$) & $\sim$5M & mgp8 & 2 \\
-pp\_$VV$\_5f\_HT ($V$ = $W$ or $Z$) & $\sim$5M & mgp8 & 2 \\
+pp\_$ee$\_5f\_HT & $\sim$5M & $mg+p8$ & 2 \\
+pp\_$\mu\mu$\_5f\_HT & $\sim$5M & $mg+p8$ & 2 \\
+pp\_$\tau\tau$\_5f\_HT & $\sim$5M & $mg+p8$ & 2 \\
+pp\_$jj$\_5f\_HT ($j$ = $u$, $d$, $c$, $s$ or $b$) & $\sim$5M & $mg+p8$ & 2 \\
+pp\_$tt$\_5f\_HT & $\sim$5M & $mg+p8$ & 2 \\
+pp\_$Vj$\_5f\_HT ($V$ = $W$ or $Z$ and $j$ = $u$, $d$, $c$, $s$ or $b$) & $\sim$5M & $mg+p8$ & 2 \\
+pp\_$VV$\_5f\_HT ($V$ = $W$ or $Z$) & $\sim$5M & $mg+p8$ & 2 \\
 \hline
 \hline
 \end{tabular}
-\caption{Summary of generated background samples. To increase equally the samples statistics in the tails of pT spectrum, the following HT (scalar sum of all visible paticles momentum at generator level) binnings has been used : [500, 1000], [1000, 2000], [2000, 5000], [5000, 10000], [10000, 27000], and [27000, 100000] GeV. 5f stands for flavour quaks : u, d, c ,s  and b.}
+\caption{Summary of generated background samples. The following HT (scalar sum of all visible paticles momentum at generator level) binnings have been used : [500, 1000], [1000, 2000], [2000, 5000], [5000, 10000], [10000, 27000], and [27000, 100000] GeV. 5f stands for flavour quaks : u, d, c ,s  and b.}
 \label{tab:MCtable_bkgd}
 \end{table}
 
@@ -109,25 +109,25 @@ pp\_$VV$\_5f\_HT ($V$ = $W$ or $Z$) & $\sim$5M & mgp8 & 2 \\
 \hline		
 process & Ngen & generator & k-factor \\
 \hline		
-pp\_$Z'_{SSM}$\_$ll$ ($l$ = $e$, $\mu$ or $\tau$) & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{p8} & \multirow{2}{*}{1} \\
+pp\_$Z'_{SSM}$\_$ll$ ($l$ = $e$, $\mu$ or $\tau$) & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{$p8$} & \multirow{2}{*}{1} \\
 mass : \{2,4,5,6,8,10,12,14,15,16,18,20,25,30,35,40,45,50\} TeV & & & \\
 \hline		
-pp\_$Z'_{flavano}$\_$\mu\mu$\_5f & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{mgp8} & \multirow{2}{*}{1} \\
+pp\_$Z'_{flavano}$\_$\mu\mu$\_5f & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{$mg+p8$} & \multirow{2}{*}{1} \\
 mass : \{4,6,8,10,12,14,15,16,18,20,25,30,35,40,45\} TeV & & & \\
 \hline		
-pp\_$LQ$\_$\mu\mu$\_5f & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{mgp8} & \multirow{2}{*}{1} \\
+pp\_$LQ$\_$\mu\mu$\_5f & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{$mg+p8$} & \multirow{2}{*}{1} \\
 mass : \{4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40\} TeV & & & \\
 \hline		
-pp\_$Z'_{TC2}$\_$tt$ & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{p8} & \multirow{2}{*}{1} \\
+pp\_$Z'_{TC2}$\_$tt$ & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{$p8$} & \multirow{2}{*}{1} \\
 mass : \{2,5,10,15,20,25,30,35\} TeV & & & \\
 \hline		
-pp\_$RSG$\_$WW$ & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{p8} & \multirow{2}{*}{1} \\
+pp\_$RSG$\_$WW$ & \multirow{2}{*}{$\sim$1M} & \multirow{2}{*}{$p8$} & \multirow{2}{*}{1} \\
 mass : \{2,5,10,15,20,25,30,35\} TeV & & & \\
 \hline		
-pp\_$Q^*$\_$qq$ ($q$ = $u$, $d$, $c$, $s$, $b$ or $t$) & \multirow{2}{*}{$\sim$0.6M} & \multirow{2}{*}{p8} & \multirow{2}{*}{1} \\
+pp\_$Q^*$\_$qq$ ($q$ = $u$, $d$, $c$, $s$, $b$ or $t$) & \multirow{2}{*}{$\sim$0.6M} & \multirow{2}{*}{$p8$} & \multirow{2}{*}{1} \\
 mass : \{15,20,25,30,35,40,45,50\} TeV & & & \\
 \hline		
-pp\_$Z'_{SSM}$\_$jj$ ($j$ = $u$, $d$, $c$, $s$ or $b$) & \multirow{2}{*}{$\sim$1.2M} & \multirow{2}{*}{p8} & \multirow{2}{*}{1} \\
+pp\_$Z'_{SSM}$\_$jj$ ($j$ = $u$, $d$, $c$, $s$ or $b$) & \multirow{2}{*}{$\sim$1.2M} & \multirow{2}{*}{$p8$} & \multirow{2}{*}{1} \\
 mass : \{10,15,20,25,30,35,40,45,50\} TeV & & & \\
 \hline
 \hline
@@ -173,7 +173,7 @@ The input variables are defined to be the same as the ones used to perform cut-b
 \newline
 Top and $W$ taggers were optimised using jets with a transverse boost of $\pt=$10 TeV. At these extreme energies, $W$ and top jets have a characteristic angular size $R=0.01-0.02$, i.e smaller than the typical electromagnetic and hadronic calorimeter cells. Following the approach described in~\cite{Larkoski:2015yqa}, we exploit the superior track angular resolution and reconstruct jets from tracks only (track jets) using the anti-$k_T$ algorithm with a parameter R=0.2. The missing neutral energy is corrected for by rescaling the track 4-momenta by the factor $\ptSup{trk}/\ptSup{PF}$, where $\ptSup{trk}$ is the track Jet \pt\ and $\ptSup{PF}$ is the Particle-Flow Jet \pT. In what follows, we will simply refer to ``track jets'' as the jet collection that includes the aforementioned rescaling.
 \newline
-The boosted top tagger is built from jet substructure observables: the soft-dropped jet mass~\cite{Larkoski:2014wba} and N-subjettiness~\cite{Thaler:2010tr} variables $\tau_{1,2,3}$ and their ratios $\tau_{2}/\tau_{1}$ and $\tau_{3}/\tau_{2}$. The $W$-jet versus QCD-jet tagger also uses an ``isolation-like'' variable that exploits the absence of high \pt\ final state-radiation (FSR) in the vicinity of the $W$ decay products. We call these variables $E_{F}(n,\alpha)$ and define them as:
+The boosted top tagger is built from jet substructure observables: the soft-dropped jet mass~\cite{Larkoski:2014wba} and N-subjettiness~\cite{Thaler:2010tr} variables $\tau_{1,2,3}$ and their ratios $\tau_{2}/\tau_{1}$ ($\tau_{21}$) and $\tau_{3}/\tau_{2}$ ($\tau_{32}$). The $W$-jet versus QCD-jet tagger also uses an ``isolation-like'' variable that exploits the absence of high \pt\ final state-radiation (FSR) in the vicinity of the $W$ decay products. We call these variables $E_{F}(n,\alpha)$ and define them as:
 
 \begin{equation}
 E_{F}(n,\alpha) =  \frac{\sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \frac{n}{5}\alpha} \ptSup{(k)}}{\sum \limits_{\Delta R(k,jet)< \alpha} \ptSup{(k)}}
@@ -181,12 +181,12 @@ E_{F}(n,\alpha) =  \frac{\sum \limits_{\frac{n-1}{5}\alpha < \Delta R(k,jet)< \f
 \newline
 We use $\alpha=0.05$. We construct 5 variables $E_{F}(n,\alpha)$ with $n=1..5$ and provide them as input to the BDT. The $E_{F}(1,0.05)$ observable is shown in 
 %Figure~\ref{figure:hadronicresonances:BDTeff} (left).
-Figures~\ref{fig:TMVA_inputs_w} and~\ref{fig:TMVA_final_result}.
+Figures~\ref{fig:TMVA_final_result} (left) and~\ref{fig:TMVA_inputs_w}.
 %The final performance of the $W$ and top tagger is shown in Figure~\ref{figure:hadronicresonances:BDTeff} (right).
-The final performance of the $W$ and top tagger is shown in Figure~\ref{fig:TMVA_final_result} (more TMVA details results can be found in appendix~\ref{appendix:tmva}).
-The $W$ tagging performance has significantly better performance due to the use of the energy-flow variables. We choose our working points with a top and $W$ tagging efficiencies of $\epsilon_S^{\text{top}}=60\%$ and $\epsilon_S^{\text{W}}=90\%$ corresponding respectively to a background efficiency of $\epsilon_B^{\text{top}}=\epsilon_B^{\text{W}}=10\%$. These working points corresponds to a cut at 0.15 on the tagger value in both taggers.
+The final performance of the $W$ and top tagger is shown in Figure~\ref{fig:TMVA_final_result} (right). More $TMVA$ (Toolkit for Multivariate Data Analysis) detailed results can be found in appendix~\ref{appendix:tmva}.
+The $W$ tagging performance has significantly better performance due to the use of the energy-flow variables. We choose our working points with a top and $W$ tagging efficiencies of $\epsilon_S^{\text{top}}=60\%$ and $\epsilon_S^{\text{W}}=90\%$ corresponding respectively to a background efficiency of $\epsilon_B^{\text{top}}=\epsilon_B^{\text{W}}=10\%$. These working points corresponds to a cut at 0.15 on the BDT output value for both taggers.
 \newline
-Some extra cross-checks have been performed. First, removing fully correlated variables have tried and doesn't change anything to performances obtained. Then the BDT response has been shown for different signal masses generation to understand how much analysis can be mass dependent (Figure \ref{fig:BDT_signal_shape_comparison}). From the cuts defined in the analysis level at 0.15, the BDT shape response difference is not changing so much the proportion of signal kept and it removes 90\% and 95\% of QCD for thad and Whad taggers respectively.
+Some extra cross-checks have been performed. First, removing fully correlated variables have been tried and it doesn't change anything to performances obtained. Then the BDT response has been shown for different signal masses to understand how much the analyses can be mass dependent (Figure \ref{fig:BDT_signal_shape_comparison}). From the cuts defined in the analysis level at 0.15, the BDT shape response difference is not changing so much the proportion of signal kept and it removes 90\% and 95\% of QCD for thad and Whad taggers respectively.
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|}
@@ -202,24 +202,24 @@ Train stat. signal (jets)     & 1117500 & 1432192 \\
 Train stat. background (jets) & 1578098 & 1578098 \\
 \hline
 % rename them
-ranked variables & Jet\_trk02\_tau3 (0.12)        & Jet\_trk02\_tau1 (0.21) \\
-(ordered)        & Jet\_trk02\_SD\_Corr\_m (0.11) & Jet\_trk02\_SD\_Corr\_m (0.17) \\
-                 & Jet\_trk02\_tau31 (0.10)       & Jet\_trk02\_tau31 (0.11) \\
-                 & Jet\_Flow55 (0.09)             & Jet\_trk02\_tau2 (0.10) \\
-                 & Jet\_Flow45 (0.09)             & Jet\_trk02\_tau3 (0.09) \\
-                 & Jet\_Flow15 (0.08)             & Jet\_trk08\_SD\_Corr\_m (0.09) \\
-                 & Jet\_Flow25 (0.07)             & Jet\_trk04\_SD\_Corr\_m (0.09) \\
-                 & Jet\_Flow35 (0.06)             & Jet\_trk02\_tau32 (0.08) \\
-                 & Jet\_trk02\_tau21 (0.06)       & Jet\_trk02\_tau21 (0.06) \\
-                 & Jet\_trk08\_SD\_Corr\_m (0.06) &  \\
-                 & Jet\_trk04\_SD\_Corr\_m (0.06) &  \\
-                 & Jet\_trk02\_tau1 (0.05)        &  \\
-                 & Jet\_trk02\_tau2 (0.04)        &  \\
-                 & Jet\_trk02\_tau32 (0.02)       &  \\
+ranked variables & $Jet^{trk02}(\tau_3)$ (0.12)      & $Jet^{trk02}(\tau_1)$ (0.21) \\
+(ordered)        & $Jet^{trk02}(M^{SD Corr})$ (0.11) & $Jet^{trk02}(M^{SD Corr})$ (0.17) \\
+                 & $Jet^{trk02}(\tau_{31})$ (0.10)   & $Jet^{trk02}(\tau_{31})$ (0.11) \\
+                 & $Jet(Flow55)$ (0.09)              & $Jet^{trk02}(\tau_2)$ (0.10) \\
+                 & $Jet(Flow45)$ (0.09)              & $Jet^{trk02}(\tau_3)$ (0.09) \\
+                 & $Jet(Flow15)$ (0.08)              & $Jet^{trk08}(M^{SD Corr})$ (0.09) \\
+                 & $Jet(Flow25)$ (0.07)              & $Jet^{trk04}(M^{SD Corr})$ (0.09) \\
+                 & $Jet(Flow35)$ (0.06)              & $Jet^{trk02}(\tau_{32})$ (0.08) \\
+                 & $Jet^{trk02}(\tau_{21})$ (0.06)   & $Jet^{trk02}(\tau_{21})$ (0.06) \\
+                 & $Jet^{trk08}(M^{SD Corr})$ (0.06) &  \\
+                 & $Jet^{trk04}(M^{SD Corr})$ (0.06) &  \\
+                 & $Jet^{trk02}(\tau_1)$ (0.05)      &  \\
+                 & $Jet^{trk02}(\tau_2)$ (0.04)      &  \\
+                 & $Jet^{trk02}(\tau_{32}$ (0.02)    &  \\
 \hline
 \hline
 \end{tabular}
-\caption{Summary of BDT informations used to train Whad/thad VS QCD.}
+\caption{Summary of BDT informations used to train Whad/thad VS QCD taggers.}
 \label{tab:TMVA_summary}
 \end{table}
 
@@ -428,8 +428,12 @@ The discovery potential for high mass resonances decaying to $ee$, $\mu\mu$ and 
 
 
 \subsection{\texorpdfstring{$\mu\mu$}{uu} non-resonant interpretations}
-Flavour anomaly model and t-channel LQ interpretations from 1710.06363 ref. Few lines to explain same selection as Zprimemumu and put plots for final sel+limit+disco. " sentences for motivation and conclude Z' is visible and LQ would need par production.
-selection diff wrt Z'mumu : leton pT > 1 -> 1.2TeV
+LHCb measurements in $B\rightarrow~K^*\mu~+\mu~−$ decays are somewhat discrepant with Standard Model predictions~\cite{Aaij:2014ora,Aaij:2017vbb}. They may be harbingers of new physics at an energy scale potentially accessible to direct discovery. The flavour anomaly model $Z'$ and t-channel LQ interpretations from~\cite{Allanach:2017bta} are studied in this section.
+\newline
+The selection strategy is the same as the $Z'\rightarrow~\mu^+\mu^-$ in section~\ref{subsec:lepreso}. The only difference is the increase of lepton momentum threshold from 1 to 1.2 TeV.
+\newline
+Figure~\ref{figure:leptonicresonances:resultsmumu_flav} ($Z'$ flavour anomaly) and ~\ref{figure:leptonicresonances:resultsmumu_flav} (t-channel LQ) show the invariant mass of the $\mu^+\mu^-$ system (left), the exclusion limit obtained \intlumifcc\ (middle) and the integrated luminosity required to reach a $5\sigma$ discovery for the two scenarios as a function of the mass of the $\mu^+\mu^-$ system (right).
+It is found that $Z'$ is visible and LQ would need to search for pair production.
 
 \begin{figure}[!htb]
   \centering
@@ -543,18 +547,21 @@ The expected exclusion limits at 95\% CL are shown in Figures~\ref{figure:hadron
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Comparison with 27 TeV HE-HLC}
 \label{sec:ana27tev}
+A comparison with HE-LHC scenario has been performed.
+In order to achieve it all the samples have been rederived with the associated expected energy of 27 TeV and the benchmark luminositiy used is 15 $a^{-1}$ .
+\newline
+The analyses strategies are the same, only the thresholds have been updated for the 27 TeV conditions. Here is the detail of the changes done :
+\begin{itemize}
+\item $Z'\rightarrow~ee or \mu\mu$, leton $p_T$ lowered from 1TeV to 0.5 TeV
+%and mZ' > 2.5 TeV -> 1 TeV
+\item $Z'\rightarrow~\mu\mu flav anomaly$, leton $p_T$ lowered from  1.2TeV to 0.75 TeV
+\item $Z'\rightarrow~\tau\tau$, optimal cuts changed as shown in Table~\ref{tab:leptonicresonances:selectiontautau27}
+\item $RSG\rightarrow~WW$, $Jet_trk02_SD_Corr_pt$ lowered from 3 TeV to 1 TeV
+\item $Z'\rightarrow~tt$, $Jet_trk02_SD_Corr_pt$ lowered from 3 TeV -> 1 TeV
+\item $Q^*\rightarrow~qq$, $Jet_calo04_pt$ lowered from 3 TeV to 1 TeV
+\end{itemize}
 
-finalize editing here :
-
-Zpll -> ee mumu
-leton pT > 1TeV -> 0.5 TeV
-mZ' > 2.5 TeV -> 1 TeV
-
-mumu flav ano
-leton pT > 1.2TeV -> 0.75 TeV
-
-Zptautau
-optimal cuts changed as shown in Table~\ref{tab:leptonicresonances:selectiontautau27}
+Table~\ref{tab:27vs100} shows the detailed results of the limit and discovery reach at $5\sigma$ for the HE-LHC 27 TeV and FCC-hh 100 TeV scenarios. More detailed results can be found for each 27 TeV analysis in Appendix~\ref{appendix:zpll27},~\ref{appendix:zpmumufalvano27},~\ref{appendix:zptautau27},~\ref{appendix:zptt27},~\ref{appendix:rsgww27}  and~\ref{appendix:qstarjj27}.
 
 \begin{table}[htbp]
    \centering
@@ -576,16 +583,6 @@ optimal cuts changed as shown in Table~\ref{tab:leptonicresonances:selectiontaut
   \caption{List of mass dependent cuts optimised to maximise the sensitivity for the \Zptata\ search.}
   \label{tab:leptonicresonances:selectiontautau27}
 \end{table}
-
-RSGWW
-$Jet1_trk02_SD_Corr_pt$ > 3 TeV -> 1 TeV
-
-Zptt
-$Jet1_trk02_SD_Corr_pt$ > 3 TeV -> 1 TeV
-
-qq
-$Jet1_calo04_pt$ > 3 TeV -> 1 TeV
-
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|c|c|c|}
