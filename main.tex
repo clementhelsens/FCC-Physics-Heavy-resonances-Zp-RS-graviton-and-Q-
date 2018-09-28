@@ -30,7 +30,7 @@
 \newcommand*{\Zpee}{\ensuremath{Z^{\prime}\rightarrow \text{e e}}}
 \newcommand*{\Zpmumu}{\ensuremath{Z^{\prime}\rightarrow \mu\mu}}
 \newcommand*{\Zpll}{\ensuremath{Z^{\prime}\rightarrow \ell\ell}}
-\newcommand*{\Zptt}{\ensuremath{Z^{\prime}\rightarrow \ttbar}}
+%\newcommand*{\Zptt}{\ensuremath{Z^{\prime}\rightarrow \ttbar}}
 \newcommand*{\hht}{\ensuremath{H_{\ensuremath{T}}}}
 \newcommand*{\met}{\ensuremath{E_{T}^{\rm{miss}}}}
 \newcommand*{\intlumifcc}{\ensuremath{\mathcal{L}=30\text{ ab}^{-1}}}
@@ -169,7 +169,7 @@ We also consider two variations around it as well as the CMS configuration.
 An important ingredient of the \zptt\ and \rsg\ searches is the identification of heavy boosted top quarks and $W$ bosons. Two jet taggers using Boosted Decision Trees (BDT) were developed to discriminate $W$ and top jets against the $\pt$ di-jet background.
 \newline
 The BDT parameters used are the following : NTrees=600, MaxDepth=4, AdaBoost, AdaBoostBeta=0.15, SeparationType=GiniIndex, nCuts=100, PruneMethod=NoPruning. As the tagger goal is to discriminate jets, a jet collection is build to feed the BDT and a simple event selection is applied by requiring only events without isolated leptons.
-The input variables are defined to be the same as the ones used to perform cut-based associated analysis ($\Zp \rightarrow \ttbar$ and $G \rightarrow WW$ in section~\ref{subsec:hadreso}) and the idea is to fully exploit these informations thanks to the BDT. Summary of samples used to train the BDT, the statistics of the input jet samples and variables (ordered by training weight) can be found in table~\ref{tab:TMVA_summary}.
+The input variables are defined to be the same as the ones used to perform cut-based associated analysis (\zptt\ and \rsg\ in section~\ref{subsec:hadreso}) and the idea is to fully exploit these informations thanks to the BDT. Summary of samples used to train the BDT, the statistics of the input jet samples and variables (ordered by training weight) can be found in table~\ref{tab:TMVA_summary}.
 \newline
 Top and $W$ taggers were optimised using jets with a transverse boost of $\pt=$10 TeV. At these extreme energies, $W$ and top jets have a characteristic angular size $R=0.01-0.02$, i.e smaller than the typical electromagnetic and hadronic calorimeter cells. Following the approach described in~\cite{Larkoski:2015yqa}, we exploit the superior track angular resolution and reconstruct jets from tracks only (track jets) using the anti-$k_T$ algorithm with a parameter R=0.2. The missing neutral energy is corrected for by rescaling the track 4-momenta by the factor $\ptSup{trk}/\ptSup{PF}$, where $\ptSup{trk}$ is the track Jet \pt\ and $\ptSup{PF}$ is the Particle-Flow Jet \pT. In what follows, we will simply refer to ``track jets'' as the jet collection that includes the aforementioned rescaling.
 \newline
@@ -478,6 +478,8 @@ Jets are clustered using particle-flow candidates with the anti-$k_T$~\cite{Cacc
 As track jets are better able to resolve the jet sub-structure compared to particle-flow jets, the jet selection for the \rsg\ and \zptt\ searches using track jets. As no lepton veto is applied, there is also some acceptance for leptonic decays. The sensitivity to semi-leptonic $WW$ or \ttbar\ decays is enhanced by adding the $\metvec$ vector to the closest jet 4-momentum (among the to leading jets).
 
 We require two jets with a $\pt$>3~TeV and $|\eta<3|$ and $\Delta(\eta)<2.4$. Both jets must either be $W$ or top tagged (section~\ref{subsec:mvatagger}) by requiring multivariate tagger > 0.15. Both high-\pt\ jets must be $b$-tagged for the \zptt\ analysis. Finally, to further reject QCD, we require for both jets $m_{SD}>40$~GeV. In Figure~\ref{figure:hadronicresonances:ttsel08} we show the di-jet invariant mass distribution after the final cuts for the \rsg\ (center) and \zptt\ (right) analyses respectively.
+\newline
+More detailed results can be found in Appendix~\ref{appendix:zptt100} (\zptt) and~\ref{appendix:rsg100} (\rsg).
 
 \begin{figure}[!htb]
   \centering
@@ -552,13 +554,12 @@ In order to achieve it all the samples have been rederived with the associated e
 \newline
 The analyses strategies are the same, only the thresholds have been updated for the 27 TeV conditions. Here is the detail of the changes done :
 \begin{itemize}
-\item $Z'\rightarrow~ee or \mu\mu$, leton $p_T$ lowered from 1TeV to 0.5 TeV
-%and mZ' > 2.5 TeV -> 1 TeV
-\item $Z'\rightarrow~\mu\mu flav anomaly$, leton $p_T$ lowered from  1.2TeV to 0.75 TeV
-\item $Z'\rightarrow~\tau\tau$, optimal cuts changed as shown in Table~\ref{tab:leptonicresonances:selectiontautau27}
-\item $RSG\rightarrow~WW$, $Jet_trk02_SD_Corr_pt$ lowered from 3 TeV to 1 TeV
-\item $Z'\rightarrow~tt$, $Jet_trk02_SD_Corr_pt$ lowered from 3 TeV -> 1 TeV
-\item $Q^*\rightarrow~qq$, $Jet_calo04_pt$ lowered from 3 TeV to 1 TeV
+\item \Zpee\ or \Zpmumu : leton $p_T$ lowered from 1TeV to 0.5 TeV,
+\item \Zpmumu\ flavour anomaly and t-channel LQ : leton $p_T$ lowered from  1.2 TeV to 0.75 TeV,
+\item \Zptata\ : optimal cuts changed as shown in Table~\ref{tab:leptonicresonances:selectiontautau27},
+\item \rsg\ : $Jet^{trk02}(p_T^{SD Corr})$ lowered from 3 TeV to 1 TeV,
+\item \zptt\ : $Jet^{trk02}(p_T^{SD Corr})$ lowered from 3 TeV to 1 TeV,
+\item \qjj\ : $Jet^{calo04}(p_T)$ lowered from 3 TeV to 1 TeV.
 \end{itemize}
 
 Table~\ref{tab:27vs100} shows the detailed results of the limit and discovery reach at $5\sigma$ for the HE-LHC 27 TeV and FCC-hh 100 TeV scenarios. More detailed results can be found for each 27 TeV analysis in Appendix~\ref{appendix:zpll27},~\ref{appendix:zpmumufalvano27},~\ref{appendix:zptautau27},~\ref{appendix:zptt27},~\ref{appendix:rsgww27}  and~\ref{appendix:qstarjj27}.
@@ -585,23 +586,23 @@ Table~\ref{tab:27vs100} shows the detailed results of the limit and discovery re
 \end{table}
 
 \begin{table}[!htb]\centering
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \hline
-analysis   & \multicolumn{3}{c|}{HE-LHC} & \multicolumn{3}{c|}{FCC-hh} \\
-           & Limit [TeV] & Disco [TeV]   & Disco [TeV]    & Limit [TeV] & Disco [TeV] & Disco [TeV] \\
-           &             & (1 $ab^{-1}$) & (15 $ab^{-1}$) &             & (2.5 $ab^{-1}$) & (30 $ab^{-1}$)  \\
+analysis   & \multicolumn{3}{c|}{HE-LHC (FCC-hh)} \\
+           & Limit [TeV] & Disco [TeV]   & Disco [TeV] \\
+           &             & 1 (2.5) $ab^{-1}$ & 15 (30) $ab^{-1}$ \\
 \hline
-Zpll       & 13 & 10 & 13 & 40 & 33 & 43 \\
-Zptautau   &  6 &  3 &  6 & 14 & 12 & 18 \\
-Zpmumuflav &  4 &  - &  2 & 25 & 10 & 19 \\
-Zptt       & 10 &  6 &  8 & 28 & 16 & 23 \\
-RSGWW      &  8 &  5 &  7 & 28 & 15 & 22 \\
-Q*qq       & 14 & 10 & 12 & 43 & 36 & 40 \\
+Zpll       & 13 (40) & 10 (33) & 13 (43) \\
+Zptautau   &  6 (14) &  3 (12) &  6 (18) \\
+Zpmumuflav &  4 (25) &  - (10) &  2 (19) \\
+Zptt       & 10 (28) &  6 (16) &  8 (23) \\
+RSGWW      &  8 (28) &  5 (15) &  7 (22) \\
+Q*qq       & 14 (43) & 10 (36) & 12 (40) \\
 \hline
 \hline
 \end{tabular}
-\caption{Limit (first number) and discovery reach at 5 $\sigma$ (second number) comparison between HE-LHC (27 TeV 15 ab-1) and FCC-hh (100 TeV 30 ab-1).}
+\caption{Limit and discovery reach at 5 $\sigma$ comparison between HE-LHC (27 TeV 15 ab-1) and FCC-hh (100 TeV 30 ab-1).}
 \label{tab:27vs100}
 \end{table}
 
@@ -682,13 +683,13 @@ using 30 $\afb{}$ of data.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : Zptt 100 TeV}
+\section{Appendix : \zptt\ 100 TeV}
 \label{appendix:zptt100}
 
 % useless
 %\begin{figure}[!htb]\centering
 %\includegraphics[width=0.8\textwidth]{Fig/Zptt/rapiditySeparation_sel0_before_cut_nostack_log.eps}
-%\caption{Rapidity separation at preselection level before cut on this variable in $\Zp \rightarrow \ttbar$ %analysis. The generated mass of the signal sample is 10 $\TeV$.}
+%\caption{Rapidity separation at preselection level before cut on this variable in \zptt\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 %\label{fig:Zptt_sel0_rapidity}
 %\end{figure}
 
@@ -696,7 +697,7 @@ using 30 $\afb{}$ of data.
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet1_trk02_SD_Cor_m_sel0_nostack_log.eps}
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet1_tau21_sel0_nostack_log.eps}
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet1_tau32_sel0_nostack_log.eps}
-\caption{Variables used for the first step of cuts in cut-based analysis at preselection level for leading jet $\pT$ in $\Zp \rightarrow \ttbar$ analysis : jet mass SD (Soft-Dropped) corrected, jet $\tau_{21}$ and jet $\tau_{32}$. The generated mass of the signal sample is 10 $\TeV$.}
+\caption{Variables used for the first step of cuts in cut-based analysis at preselection level for leading jet $\pT$ in \zptt\ analysis : jet mass SD (Soft-Dropped) corrected, jet $\tau_{21}$ and jet $\tau_{32}$. The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:Zptt_sel0_cut}
 \end{figure}
 
@@ -704,21 +705,21 @@ using 30 $\afb{}$ of data.
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet2_trk02_SD_Cor_m_sel1_nostack_log.eps}
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet2_tau21_sel1_nostack_log.eps}
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet2_tau32_sel1_nostack_log.eps}
-\caption{Variables used for the second step of cuts in cut-based analysis after first set of cuts for second leading jet $\pT$ in $\Zp \rightarrow \ttbar$ analysis : jet mass SD (Soft-Dropped) corrected, jet $\tau_{21}$ and jet $\tau_{32}$. The generated mass of the signal sample is 10 $\TeV$.}
+\caption{Variables used for the second step of cuts in cut-based analysis after first set of cuts for second leading jet $\pT$ in \zptt\ analysis : jet mass SD (Soft-Dropped) corrected, jet $\tau_{21}$ and jet $\tau_{32}$. The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:Zptt_sel1_cut}
 \end{figure}
 
 \begin{figure}[!htb]\centering
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet1_thad_vs_QCD_tagger_sel0_nostack_log.eps}
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet2_thad_vs_QCD_tagger_sel0_nostack_log.eps}
-\caption{top Vs QCD tagger at preselection level for leading jet (left) and second leading jet $\pT$ (right) in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\caption{top Vs QCD tagger at preselection level for leading jet (left) and second leading jet $\pT$ (right) in \zptt\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:Zptt_sel0_tagger}
 \end{figure}
 
 \begin{figure}[!htb]\centering
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet1_trk02_SD_Cor_m_sel3_nostack_log.eps}
 \includegraphics[width=0.32\textwidth]{Fig/Zptt/Jet2_trk02_SD_Cor_m_sel3_nostack_log.eps}
-\caption{Jet mass SD (Soft-Dropped) corrected in anti-QCD tagger-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\caption{Jet mass SD (Soft-Dropped) corrected in anti-QCD tagger-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in \zptt\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:Zptt_sel1_tagger}
 \end{figure}
 
@@ -728,7 +729,7 @@ using 30 $\afb{}$ of data.
 %\includegraphics[width=0.33\textwidth]{Fig/check_TRF/Zptt/jet12pdgID_ttbar_redModule_blueDELPHES.png}
 %\includegraphics[width=0.33\textwidth]{Fig/check_TRF/Zptt/jet12pdgID_Zptt10TeV_redModule_blueDELPHES.png}
 %\includegraphics[width=0.33\textwidth]{Fig/check_TRF/Zptt/TRF2tagex_module_redZptt10TeV_blackQCD_bluettbar.png}
-%\caption{Checks of pdgID obtained from recomputation (red) compared to Delphes information (blue) for leading jet (continuous line) and second leading jet $\pT$ (dashed line), and for QCD (top left), $\ttbar$ (top right) and $\Zp \rightarrow \ttbar$ 10 $\TeV$ (bottom left) samples in $\Zp \rightarrow \ttbar$ analysis. Tag Rate Function for a two b-tagged jets event computed from the two leading jets only of the event (bottom right) for QCD (black), $\ttbar$ blue) and $\Zp \rightarrow \ttbar$ 10 $\TeV$ (red) samples.}
+%\caption{Checks of pdgID obtained from recomputation (red) compared to Delphes information (blue) for leading jet (continuous line) and second leading jet $\pT$ (dashed line), and for QCD (top left), $\ttbar$ (top right) and \zptt\ 10 $\TeV$ (bottom left) samples in \zptt\ analysis. Tag Rate Function for a two b-tagged jets event computed from the two leading jets only of the event (bottom right) for QCD (black), $\ttbar$ blue) and \zptt\ 10 $\TeV$ (red) samples.}
 %\label{fig:Zptt_TRFchecks}
 %\end{figure}
 
@@ -760,7 +761,7 @@ using 30 $\afb{}$ of data.
 %\includegraphics[width=0.495\textwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_fit_sel6_nostack_log.eps}
 %\includegraphics[width=0.495\textwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_fit_sel7_nostack_log.eps}
 %\includegraphics[width=0.495\textwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_fit_sel8_nostack_log.eps}
-%\caption{Zprime mass after the full selection for anaylsis cut-based (left) and anti-QCD tagger based (right), and for the b-tagging scenarios : before b-tag (top), direct 2 b-tag (middle) and Tag Rate Function 2 b-tag (bottom) in $\Zp \rightarrow \ttbar$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+%\caption{Zprime mass after the full selection for anaylsis cut-based (left) and anti-QCD tagger based (right), and for the b-tagging scenarios : before b-tag (top), direct 2 b-tag (middle) and Tag Rate Function 2 b-tag (bottom) in \zptt\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 %\label{fig:Zptt_mass_sel_final}
 %\end{figure}
 
@@ -770,7 +771,7 @@ using 30 $\afb{}$ of data.
 %\includegraphics[width=0.495\textwidth]{Fig/Zptt/DiscoveryPotential_tt_cut_rootStyle.eps}
 %\includegraphics[width=0.495\textwidth]{Fig/Zptt/lim_Zprime_tt_fcc_v02_tagger.eps}
 %\includegraphics[width=0.495\textwidth]{Fig/Zptt/DiscoveryPotential_tt_TC2_tagger_rootStyle.eps}
-%\caption{Limit (left) and discovery potential (right) for analysis cut-based with direct b-tagging (top) and anti-QCD tagger-based with direct b-tagging (bottom) in $\Zp \rightarrow \ttbar$ analysis. Default model used for discovery potential is TC2.}
+%\caption{Limit (left) and discovery potential (right) for analysis cut-based with direct b-tagging (top) and anti-QCD tagger-based with direct b-tagging (bottom) in \zptt\ analysis. Default model used for discovery potential is TC2.}
 %\label{fig:Zptt_limit_direct}
 %\end{figure}
 
@@ -779,7 +780,7 @@ using 30 $\afb{}$ of data.
 \includegraphics[width=0.33\textwidth]{Fig/Zptt/DiscoveryPotential_tt_cut_TRFbtag_rootStyle.eps}
 \includegraphics[width=0.33\textwidth]{Fig/Zptt/lim_Zprime_tt_fcc_v02_tagger_TRFbtag.eps}
 \includegraphics[width=0.33\textwidth]{Fig/Zptt/DiscoveryPotential_tt_SSM_TC2_tagger_TRFbtag_rootStyle.eps}
-\caption{Limit (left) and discovery potential (right) for analysis cut-based with TRF b-tagging (top) and anti-QCD tagger-based with TRF b-tagging (bottom) in $\Zp \rightarrow \ttbar$ analysis. Default model used for discovery potential is TC2 in the top plot. The bottom discovery plot shows the comparison between the TC2 default model (red line) and the SSM one (blue line).}
+\caption{Limit (left) and discovery potential (right) for analysis cut-based with TRF b-tagging (top) and anti-QCD tagger-based with TRF b-tagging (bottom) in \zptt\ analysis. Default model used for discovery potential is TC2 in the top plot. The bottom discovery plot shows the comparison between the TC2 default model (red line) and the SSM one (blue line).}
 \label{fig:Zptt_limit_trf}
 \end{figure}
 
@@ -813,7 +814,7 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 48916    & 27591   & 9278  \\
 \hline
 \hline
 \end{tabular}}
-\caption{Summary of $\Zp \rightarrow \ttbar$ analysis cut-flow for cut-based analysis.}
+\caption{Summary of \zptt\ analysis cut-flow for cut-based analysis.}
 \label{tab:Zptt_cutflow_cut}
 \end{table}
 %\end{landscape}
@@ -848,7 +849,7 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 49199   & 48415   & 15602 \\
 \hline
 \hline
 \end{tabular}}
-\caption{Summary of $\Zp \rightarrow \ttbar$ analysis cut-flow for tagger-based analysis.}
+\caption{Summary of \zptt\ analysis cut-flow for tagger-based analysis.}
 \label{tab:Zptt_cutflow_tagger}
 \end{table}
 %\end{landscape}
@@ -858,13 +859,13 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 49199   & 48415   & 15602 \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : RSG 100 TeV}
+\section{Appendix : \rsg\ 100 TeV}
 \label{appendix:rsg100}
 
 %  -> useless
 %\begin{figure}[!htb]\centering
 %\includegraphics[width=0.8\textwidth]{Fig/RSGww/rapiditySeparation_sel0_before_cut_nostack_log.eps}
-%\caption{Rapidity separation at preselection level before cut on this variable in $G \rightarrow WW$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+%\caption{Rapidity separation at preselection level before cut on this variable in \rsg\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 %\label{fig:RSGww_sel0_rapidity}
 %\end{figure}
 
@@ -873,7 +874,7 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 49199   & 48415   & 15602 \\
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet2_trk02_SD_Cor_m_sel0_nostack_log.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet1_tau21_sel0_nostack_log.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet2_tau21_sel0_nostack_log.eps}
-\caption{Variables used for the first step of cuts in cut-based analysis at preselection level for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis : jet mass SD (Soft-Dropped) corrected (top) and jet $\tau_{21}$ (bottom). The generated mass of the signal sample is 10 $\TeV$.}
+\caption{Variables used for the first step of cuts in cut-based analysis at preselection level for leading jet (left) and second leading jet $\pT$ (right) in \rsg\ analysis : jet mass SD (Soft-Dropped) corrected (top) and jet $\tau_{21}$ (bottom). The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:RSGww_sel0_cut}
 \end{figure}
 
@@ -882,14 +883,14 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 49199   & 48415   & 15602 \\
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet2_Flow45_sel1_nostack_log.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet1_Flow55_sel1_nostack_log.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet2_Flow55_sel1_nostack_log.eps}
-\caption{Variables used for the second step of cuts in cut-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis : jet Flow45 (top) and Flow55 (bottom). The generated mass of the signal sample is 10 $\TeV$.}
+\caption{Variables used for the second step of cuts in cut-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in \rsg\ analysis : jet Flow45 (top) and Flow55 (bottom). The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:RSGww_sel1_cut}
 \end{figure}
 
 \begin{figure}[!htb]\centering
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet1_Whad_vs_QCD_tagger_sel0_nostack_log.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet2_Whad_vs_QCD_tagger_sel0_nostack_log.eps}
-\caption{W Vs QCD tagger at preselection level for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+\caption{W Vs QCD tagger at preselection level for leading jet (left) and second leading jet $\pT$ (right) in \rsg\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 \label{fig:RSGww_sel0_tagger}
 \end{figure}
 
@@ -897,7 +898,7 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 49199   & 48415   & 15602 \\
 %\begin{figure}[!htb]\centering
 %\includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet1_trk02_SD_Cor_m_sel3_nostack_log.eps}
 %\includegraphics[width=0.33\textwidth]{Fig/RSGww/Jet2_trk02_SD_Cor_m_sel3_nostack_log.eps}
-%\caption{Jet mass SD (Soft-Dropped) corrected in anti-QCD tagger-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in $G \rightarrow WW$ analysis. The generated mass of the signal sample is 10 $\TeV$.}
+%\caption{Jet mass SD (Soft-Dropped) corrected in anti-QCD tagger-based analysis after first set of cuts for leading jet (left) and second leading jet $\pT$ (right) in \rsg\ analysis. The generated mass of the signal sample is 10 $\TeV$.}
 %\label{fig:RSGww_sel1_tagger}
 %\end{figure}
 
@@ -914,7 +915,7 @@ signal $m_{Z}$= & 10 TeV        & 101529    & 49199   & 48415   & 15602 \\
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/DiscoveryPotential_ww_cut_rootStyle.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/lim_RSGraviton_ww_fcc_v02_tagger.eps}
 \includegraphics[width=0.33\textwidth]{Fig/RSGww/DiscoveryPotential_ww_tagger_rootStyle.eps}
-\caption{Limit (left) and discovery potential (right) for analysis cut-based (top) and anti-QCD tagger-based (bottom) in $G \rightarrow WW$ analysis.}
+\caption{Limit (left) and discovery potential (right) for analysis cut-based (top) and anti-QCD tagger-based (bottom) in \rsg\ analysis.}
 \label{fig:RSWww_limit}
 \end{figure}
 
@@ -948,7 +949,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
 \hline
 \hline
 \end{tabular}}
-\caption{Summary of $G \rightarrow WW$ analysis cut-flow.}
+\caption{Summary of \rsg\ analysis cut-flow.}
 \label{tab:RSGww_cutflow}
 \end{table}
 %\end{landscape}
@@ -992,7 +993,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : Zpll 27 TeV}
+\section{Appendix : \Zpee\ and \Zpmumu\ 27 TeV}
 \label{appendix:zpll27}
 
 \begin{figure}[!htb]
@@ -1001,7 +1002,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
   \includegraphics[width=0.33\columnwidth]{Fig/27tev/Zpmumu_mzp_sel0_nostack_log.eps}
   \includegraphics[width=0.33\columnwidth]{Fig/27tev/lim_Zprime_ll_helhc_v01_allxs.eps}
   \includegraphics[width=0.33\columnwidth]{Fig/27tev/DiscoveryPotential_ll_comb_rootStyle.eps}
-  \caption{Invariant mass for a 6~TeV signal after full event selection for ee channel (top left) and $\mu\mu$ channel (top right). Limit versus mass for the di-lepton (ee,$\mu\mu$) channel ( bottom left) and luminosity for a $5\sigma$ discovery ( bottom right) comparing ee,$\mu\mu$ and combined channels.}
+  \caption{Invariant mass for a 6~TeV signal after full event selection for \Zpmumu\ (top left) and \Zpmumu\ analysis (top right). Limit versus mass for the di-lepton (ee,$\mu\mu$) channel ( bottom left) and luminosity for a $5\sigma$ discovery ( bottom right) comparing ee,$\mu\mu$ and combined channels.}
   \label{figure:leptonicresonances27:ll}
 \end{figure}
 
@@ -1012,15 +1013,15 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
   \hline
  & ee & $\mu\mu$  \\
   \hline
-  Drell-Yan &  &  \\
+  Drell-Yan    & 162699 &  244802 \\
   \hline
-  $\Zp$ 2~TeV  &   &  \\
-  $\Zp$ 4~TeV  &   &  \\
-  $\Zp$ 6~TeV  &   & \\
-  $\Zp$ 8~TeV  &   &  \\
-  $\Zp$ 10~TeV &   &  \\
-  $\Zp$ 12~TeV &   & \\
-  $\Zp$ 14~TeV &   & \\
+  $\Zp$ 2~TeV  & 737966 & 1040077 \\
+  $\Zp$ 4~TeV  &  30351 &   53020 \\
+  $\Zp$ 6~TeV  &   2694 &    5343 \\
+  $\Zp$ 8~TeV  &    380 &     781 \\
+  $\Zp$ 10~TeV &     76 &     151 \\
+  $\Zp$ 12~TeV &     23 &      41 \\
+  $\Zp$ 14~TeV &     10 &      17 \\
   \hline
   \hline
 \end{tabular}
@@ -1033,7 +1034,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : Zpmumu flav ano 27 TeV}
+\section{Appendix : \Zpmumu\ flavour anomaly 27 TeV}
 \label{appendix:zpmumufalvano27}
 
 \begin{figure}[!htb]
@@ -1041,7 +1042,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
   \includegraphics[width=0.3\columnwidth]{Fig/27tev/mzp_sel0_nostack_log.eps}
   \includegraphics[width=0.3\columnwidth]{Fig/27tev/lim_Zprime_mumu_ano_helhc_v01.eps}
   \includegraphics[width=0.3\columnwidth]{Fig/27tev/DiscoveryPotential_mumu_rootStyle.eps}
-  \caption{Left : Invariant mass for a 6~TeV signal after full event selection in flavour anomaly scenario. Limit versus mass (middle) and luminosity for a $5\sigma$ discovery (right) comparing ee,$\mu\mu$ and combined channels. }
+  \caption{Left : Invariant mass for a 6~TeV signal after full event selection in \Zpmumu\ flavour anomaly analysis scenario. Limit versus mass (middle) and luminosity for a $5\sigma$ discovery (right).}
   \label{figure:leptonicresonances27:resultsmumu_flav}
 \end{figure}
 
@@ -1050,15 +1051,15 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
 \begin{tabular}{|l|r|}
   \hline
   \hline
-  Drell-Yan &   \\
+  Drell-Yan & 47903.9 \\
   \hline
-  $\Zp$ 2~TeV  &   \\
-  $\Zp$ 4~TeV  &   \\
-  $\Zp$ 6~TeV  &   \\
-  $\Zp$ 8~TeV  &   \\
-  $\Zp$ 10~TeV &  \\
-  $\Zp$ 12~TeV &  \\
-  $\Zp$ 14~TeV &  \\
+  $\Zp$ 2~TeV  & 751.7 \\
+  $\Zp$ 4~TeV  &  94.4 \\
+  $\Zp$ 6~TeV  &  14.7 \\
+  $\Zp$ 8~TeV  &   3.7 \\
+  $\Zp$ 10~TeV &   1.7 \\
+  $\Zp$ 12~TeV &   1.2 \\
+  $\Zp$ 14~TeV &   1.1 \\
   \hline
   \hline
 \end{tabular}
@@ -1071,7 +1072,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : Zptautau 27 TeV}
+\section{Appendix : \Zptata\  27 TeV}
 \label{appendix:zptautau27}
 
 \begin{figure}[!htb]
@@ -1079,7 +1080,7 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
   \includegraphics[width=0.32\columnwidth]{Fig/27tev/Zptautau_mt_sel0_nostack_log.eps}
   \includegraphics[width=0.32\columnwidth]{Fig/27tev/lim_Zprime_tautau_helhc_v01.eps}
   \includegraphics[width=0.32\columnwidth]{Fig/27tev/DiscoveryPotential_tautau_rootStyle.eps}
-  \caption{Transverse mass (left) for a 6~TeV signal after full event selection for the $\tau\tau$ channel. Limit versus mass for the di-tau channel (middle) and luminosity for a $5\sigma$ discovery (right).}
+  \caption{Transverse mass (left) for a 6~TeV signal after full event selection for the \Zptata\ analysis. Limit versus mass for the di-tau channel (middle) and luminosity for a $5\sigma$ discovery (right).}
   \label{figure:leptonicresonances27:tautau}
 \end{figure}
 
@@ -1090,13 +1091,13 @@ signal $m_{G}$= & 10 TeV        & 47853     & 20641   & 7036   & 18169  & 15745 
   \hline
 $\Zp$ mass [TeV]  & signal &  Drell-Yan & Di-jet \\
   \hline
-  $2$  &   &   &    \\
-  $4$  &   &   &    \\
-  $6$  &   &   &    \\
-  $8$  &   &   &    \\
-  $10$ &   &   &    \\
-  $12$ &   &   &    \\
-  $14$ &   &   &    \\
+  $2$  & 36785 & 4150 & 1259894 \\
+  $4$  &  4960 & 4109 & 1323888 \\
+  $6$  &   613 & 3896 & 1244660 \\
+  $8$  &    94 & 3888 & 1238021 \\
+  $10$ &    16 & 4466 & 1551061 \\
+  $12$ &     3 & 3948 & 1202671 \\
+  $14$ &     1 & 2849 &  645107 \\
   \hline
   \hline
 \end{tabular}
@@ -1109,7 +1110,7 @@ $\Zp$ mass [TeV]  & signal &  Drell-Yan & Di-jet \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : Zptt 27 TeV}
+\section{Appendix : \zptt\ 27 TeV}
 \label{appendix:zptt27}
 
 \begin{figure}[!htb]
@@ -1142,7 +1143,7 @@ background      & vv     &     5.9 \\
 \hline
 \hline
 \end{tabular}}
-\caption{Final yield of analysis.}
+\caption{Final yield of \zptt\ analysis.}
 \label{tab:ZpttYield27}
 \end{table}
 
@@ -1151,7 +1152,7 @@ background      & vv     &     5.9 \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : RSGWW 27 TeV}
+\section{Appendix : \rsg\ 27 TeV}
 \label{appendix:rsgww27}
 
 \begin{figure}[!htb]
@@ -1184,7 +1185,7 @@ background        & vv     &  302.3 \\
 \hline
 \hline
 \end{tabular}}
-\caption{Final yield of $RSG \rightarrow WW$ analysis.}
+\caption{Final yield of \rsg\ analysis.}
 \label{tab:RSGwwYield27}
 \end{table}
 
@@ -1193,7 +1194,7 @@ background        & vv     &  302.3 \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Appendix : Qstarjj 27 TeV}
+\section{Appendix : \qjj\ 27 TeV}
 \label{appendix:qstarjj27}
 
 \begin{figure}[!htb]
