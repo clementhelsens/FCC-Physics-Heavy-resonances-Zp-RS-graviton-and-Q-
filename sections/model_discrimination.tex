@@ -194,6 +194,11 @@ It is shown for signal only (top-left) and is flat as expected. Once background 
 becomes too large the asymmetry is diluted. When adding a 10\% uncertainty on the background (bottom-left) we observe as expected larger errors and quicker dilution.
 The last plot (bottom-left) shows the same variable, but considering the full interference between the signal and the Drell-Yann. One can immediately 
 note the fact that the dilution goes in opposite direction as when not considering the interference. 
+When considering signal only, the error bars directly represents the diminution of the statical error from adding more events. It is clear that considering a mass window cut 
+larger than 500~GeV does not improve the statistical component of the signal asymmetry. When considering background without the interference, if the mass window is too large 
+the discrimination potential gets worse due to dilution. In addition, if the error on the background is not controlled at a level of the order of 10\% the error on $A_{FB}$ tends to 
+increase at large mass window values. When the interference between signal and Drell-Yan is considered, for very small values ($\sim$200~GeV) of the mass window 
+$A_{FB}$ seems consistent with not considering the interference. 
 
 \begin{figure}[!htb]
   \centering
@@ -206,13 +211,26 @@ note the fact that the dilution goes in opposite direction as when not consideri
 \end{figure}
 
 
-\subsubsubsection{Results}
-\label{subsubsection:results}
-TODOBEGING\\
-show cross section versus int luminosity, show error on AFB ry for models (2D), show scan lumi for hard to distinguish model, table that shows this impact of the eta, ISR, FSR, etc...
-plot that shows how AFB and ry evolves with the deltaM cut
-Show the effect of a cut a different cut on ry
-TODOEND\\
+\begin{table}
+\centering
+\begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c |} \hline\hline
+ & \multicolumn{2}{c|}{sig only}  & \multicolumn{2}{c|}{sig+B5\%} & \multicolumn{2}{c|}{sig+B20\%} & \multicolumn{2}{c|}{sig+B50\%} & \multicolumn{2}{c|}{sig+B100\%}\\
+
+\hline
+  Model &  $A_{FB}$   &  $r_y$   &  $A_{FB}$   &  $r_y$&  $A_{FB}$   &  $r_y$&  $A_{FB}$   &  $r_y$&  $A_{FB}$   &  $r_y$ \\
+\hline
+SSM    &     6.62     &  6.09   &     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09      \\
+LRM    &   6.39       &  6.09   &     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09 \\
+$\psi$    &  6.10   &  6.09   &     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09   \\
+$\chi$   &  6.22    &  6.09   &     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09    \\
+$\eta$   &  6.15     &  6.09   &     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09    \\
+~I        & 5.98   &  6.09   &     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09&     6.62     &  6.09   \\
+\hline\hline
+\end{tabular}
+\caption{$A_{FB}$ and $r_y$ values for different models and different assumptions.}
+\label{tab:leptonicresonances:comp}
+\end{table}
+
 
 \begin{table}
 \centering
@@ -233,6 +251,15 @@ $\eta$   &  6.15     &  6.09   &     6.62     &  6.09&     6.62     &  6.09&    
 \caption{$A_{FB}$ and $r_y$ values for different models and different assumptions.}
 \label{tab:leptonicresonances:comp}
 \end{table}
+
+
+\subsubsubsection{Results}
+\label{subsubsection:results}
+TODOBEGING\\
+show cross section versus int luminosity, show error on AFB ry for models (2D), show scan lumi for hard to distinguish model, table that shows this impact of the eta, ISR, FSR, etc...
+plot that shows how AFB and ry evolves with the deltaM cut
+Show the effect of a cut a different cut on ry
+TODOEND\\
 
 We have checked that increasing the acceptance of the leptons to 4.5 in pseudo-rapidity did not improved the discrimination further. 
 Using a profile likelihood technique, the signal strength $\mu$ can be fitted together with its corresponding error. 
