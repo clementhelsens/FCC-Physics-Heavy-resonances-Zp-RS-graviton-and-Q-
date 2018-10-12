@@ -1,7 +1,7 @@
 \section{Model discrimination at HE-LHC}
 The 14 TeV LHC with L=3 ab$^{-1}$ of integrated luminosity can search for new $Z'$ gauge bosons from the classic extended gauge theories up to masses 
-of roughly $\simeq 6$ TeV.  Here we analyzed the capability of the 27 TeV HE-LHC with L=15 ab$^{-1}$ to distinguish among six $Z'$ models employing only 
-the $e^+e^-$ and $\mu^+\mu^-$ channels assuming that $M_{Z'}=6$ TeV. Under the assumption that these $Z'$'s decay only to SM particles,  we show that 
+of roughly $\simeq 6$ TeV.  Here we analyzed the capability of the 27 TeV HE-LHC with L=15 ab$^{-1}$ to distinguish among six $Z'$ models employing for the leptonic decays only 
+the $e^+e^-$ and $\mu^+\mu^-$ channels, and top b and light jets for the hadronic decays and assuming that $M_{Z'}=6$ TeV. Under the assumption that these $Z'$'s decay only to SM particles,  we show that 
 there are sufficient observables to perform this model differentiation in most cases. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -229,8 +229,11 @@ $A_{FB}$ increases extremely slowly with the uncertainty on the Drell-Yan, which
 It is calculated for two different lepton acceptance, LHC-like acceptance $|\eta_l|<2.5$ and an increase coverage up to $|\eta_l|<4.5$. A small reduction in the error, mostly for $r_y$ is observed when considering a larger acceptance.
 
 \begin{table}
+\caption{$A_{FB}$ and $r_y$ values for different models and different lepton acceptance considering a mass window of 200~GeV. Uncertainties are show for an integrated luminosity of 15~ab$^{-1}$.}
+
 \centering
-\begin{tabular}{| c | c | c | c | c | c | |} \hline\hline
+\begin{tabular}{| c | c | c | c | c | c | |} 
+\hline\hline
  & \multicolumn{2}{c|}{$|\eta_l|<2.5$}  & \multicolumn{2}{c|}{$|\eta_l|<4.5$} \\
 
 \hline
@@ -244,7 +247,6 @@ $\eta$  & -0.224$\pm$0.026  & 1.95$\pm$0.109 & -0.023$\pm$0.026 & 1.84$\pm$0.099
 ~I         & -0.260$\pm$0.025 & 2.17$\pm$0.113  & -0.262$\pm$0.024 & 2.04$\pm$0.103   \\
 \hline\hline
 \end{tabular}
-\caption{$A_{FB}$ and $r_y$ values for different models and different lepton acceptance considering a mass window of 200~GeV. Uncertainties are show for an integrated luminosity of 15~ab$^{-1}$.}
 \label{tab:leptonicresonances:comp1}
 \end{table}
 
@@ -252,6 +254,8 @@ $\eta$  & -0.224$\pm$0.026  & 1.95$\pm$0.109 & -0.023$\pm$0.026 & 1.84$\pm$0.099
 It is calculated for two different cases, no final state radiations, and no initial nor final state radiations. This demonstrate that the measurement is little affected such effect.
 
 \begin{table}
+\caption{$A_{FB}$ and $r_y$ values for different models and removing ISR only and both ISR/FSR considering a mass window of 200~GeV. Uncertainties are of statistical nature only.}
+
 \centering
 \begin{tabular}{| c | c | c | c | c | c |} \hline\hline
  & \multicolumn{2}{c|}{no FSR} & \multicolumn{2}{c|}{no ISR/FSR}\\
@@ -267,7 +271,6 @@ $\eta$  &   -0.022$\pm$0.001  & 1.82$\pm$0.007   &  -0.023$\pm$0.002 &  1.76$\pm
 ~I         &   -0.259$\pm$0.002  &  2.02$\pm$0.008  &   -0.288$\pm$0.002 &  2.04$\pm$0.010\\
 \hline\hline
 \end{tabular}
-\caption{$A_{FB}$ and $r_y$ values for different models and removing ISR only and both ISR/FSR considering a mass window of 200~GeV. Uncertainties are of statistical nature only.}
 \label{tab:leptonicresonances:comp2}
 \end{table}
 
@@ -277,50 +280,75 @@ $\eta$  &   -0.022$\pm$0.001  & 1.82$\pm$0.007   &  -0.023$\pm$0.002 &  1.76$\pm
 
 \subsubsubsection{Results}
 \label{subsubsection:results}
-TODOBEGING\\
-show cross section versus int luminosity, show error on AFB ry for models (2D), show scan lumi for hard to distinguish model, table that shows this impact of the eta, ISR, FSR, etc...
-plot that shows how AFB and ry evolves with the deltaM cut
-Show the effect of a cut a different cut on ry
-TODOEND\\
 
-We have checked that increasing the acceptance of the leptons to 4.5 in pseudo-rapidity did not improved the discrimination further. 
-Using a profile likelihood technique, the signal strength $\mu$ can be fitted together with its corresponding error. 
+Figure~\ref{figure:lepana:afb_ry} represents the discrimination potential of $r_y$ and $A_{FB}$ together in different configurations. The two models $\chi$ and $I$ presents excellent discrimination while for SSM and LRM 
+the differences are reduced. On the other hand, $\eta$ and $\Psi$ are almost fully degenerated.  
+
+
+\begin{figure}[!htb]
+  \centering
+   \includegraphics[width=0.45\columnwidth]{Fig/27tev/ry_afb_200GeV_eta2p5.eps}
+   \includegraphics[width=0.45\columnwidth]{Fig/27tev/ry_afb_200GeV_eta2p5_interf.eps}
+   \includegraphics[width=0.45\columnwidth]{Fig/27tev/ry_afb_500GeV_eta2p5.eps}
+   \includegraphics[width=0.45\columnwidth]{Fig/27tev/ry_afb_500GeV_eta2p5_interf.eps}
+  \caption{Scatter plot of $r_y$ versus $A_{FB}$ for 200(500)~GeV and mass window top(bottom). A 10\% uncertainty on the Drell-Yan is considered for the left plots while the full interference is shown on the right.}
+  \label{figure:lepana:afb_ry}
+\end{figure}
+
+Using a profile likelihood technique, the signal strength $\mu$ can be fitted together with its corresponding error. Figure~\ref{figure:lepana:sigma_vs_lumi} represents this and it is on its own very discriminant, and 
+it seems to be possible to even discriminate the previous two models that were not distinguishable. A side note, since the cross-section can easily be modified by just adding an overall rescaling of the coupling, 
+it is clear it is not correct to claim discrimination just out of the cross-section.
+
+\begin{figure}[!htb]
+  \centering
+   \includegraphics[width=0.45\columnwidth]{Fig/27tev/sigma.eps}
+    \caption{Fitted signal cross-section together with its corresponding error versus integrated luminosity.}
+  \label{figure:lepana:sigma_vs_lumi}
+\end{figure}
 
 
 \subsubsection{Hadronic analysis}
 \label{subsection:hadana}
-In this section the hadronic decays of the $Z'$ will be tested in order to enhance the discrimination potential. 
+In this section the hadronic decays of the $Z'$ will be tested in order to enhance the discrimination potential. The event selection for the three considered hadronic decays in order 
+to ensure excellent orthogonality is explained below. 
 
-\subsubsubsection{$Z' \rightarrow t\bar{t}$}
-\subsubsubsection{$Z' \rightarrow b\bar{b}$}
-\subsubsubsection{$Z' \rightarrow q\bar{q}$}
+\subparagraph{$Z' \rightarrow t\bar{t}$}
+The analysis presented in~\ref{subsec:hadreso} is used as baseline, with some modifications of the cuts explained in~\ref{sec:ana27tev}.
+\subparagraph{$Z' \rightarrow b\bar{b}$}
+This analysis selects two high $p_T$ b-tagged jets and veto events that have at least one top-tagged jets from $Z' \rightarrow t\bar{t}$ analysis.
+\subparagraph{$Z' \rightarrow q\bar{q}$}
+This analysis selects two high $p_T$  jets and veto events that have at least one top-tagged or b-tagged jets from $Z' \rightarrow t\bar{t}$ and $Z' \rightarrow b\bar{b}$ analyses.
+Invariant mass of the di-jet system is shown on Figure~\ref{figure:hadronicresonances:masses}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.30\columnwidth]{Fig/27tev/Mj1j2_pf08_MetCorr_fit_sel0_nostack_log_tt.eps}
   \includegraphics[width=0.30\columnwidth]{Fig/27tev/Mj1j2_pf08_MetCorr_fit_sel0_nostack_log_bb.eps}
   \includegraphics[width=0.30\columnwidth]{Fig/27tev/Mj1j2_pf08_MetCorr_fit_sel0_nostack_log_jj.eps}
-  \caption{Left, center: Invariant mass for a 6~TeV signal after full event selection for ee channel (left) and $\mu\mu$ channel (center). Right: Transverse mass for a 6~TeV signal after full event selection for the $\tau\tau$ channel. }
-  \label{figure:leptonicresonances:masses}
+  \caption{Invariant mass for a 6~TeV signal after full event selection for $t\bar{t}$ channel (left), $b\bar{b}$ channel (center) and $q\bar{q}$ channel (right). }
+  \label{figure:hadronicresonances:masses}
 \end{figure}
 
 \subsubsubsection{Results}
+Figure~\ref{figure:hadana:discri30ab} summarise the discrimination potential in terms of fitted cross-section of the different models considering the three hadronic decays, $t\bar{t}$,  $b\bar{b}$ and $q\bar{q}$. 
+Overall good discrimination can be reached, but nevertheless $\eta$ and $\Psi$ still presents similar results, except maybe for $t\bar{t}$ where some difference can be observed.
 
 
 \begin{figure}[h]
   \centering
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_4TeV_5ab.eps}
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_6TeV_5ab.eps}
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_8TeV_5ab.eps}
+%    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_4TeV_5ab.eps}
+ %   \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_6TeV_5ab.eps}
+ %   \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_8TeV_5ab.eps}
 
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_4TeV_15ab.eps}
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_6TeV_15ab.eps}
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_8TeV_15ab.eps}
+ %   \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_4TeV_15ab.eps}
+    \includegraphics[width=0.45\columnwidth]{Fig/27tev/Zp_branching_6TeV_15ab.eps}
+ %   \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_8TeV_15ab.eps}
 
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_4TeV_30ab.eps}
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_6TeV_30ab.eps}
-    \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_8TeV_30ab.eps}
-  \caption{Discrimination for 4, 6 and 8TeV (left, center, right) masses with 5, 15 and 30ab$^{-1}$ (up, middle, down) of integrated luminosity. Statistical and full uncertainties are shown on each point.}
+  %  \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_4TeV_30ab.eps}
+  %  \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_6TeV_30ab.eps}
+  %  \includegraphics[width=0.3\columnwidth]{Fig/27tev/Zp_branching_8TeV_30ab.eps}
+    \caption{Fitted cross-section of the three hadronic analyses. Statistical and full uncertainties are shown on each point.}
+
   \label{figure:hadana:discri30ab}
 \end{figure}
 
