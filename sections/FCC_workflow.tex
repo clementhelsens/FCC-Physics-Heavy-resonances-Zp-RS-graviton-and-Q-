@@ -1,16 +1,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{FCC work flow}
+%\section{FCC work flow}
+\section{Work flow}
 \label{sec:fccworkflow}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Monte-Carlo production}
 \label{subsec:mcprod}
 
-Monte Carlo~(MC) simulated event samples were used to simulate the response of the FCC detector to signal and backgrounds. The muon momentum resolution is assumed to be $\sigma(p)/p \approx 20\%$ at $\pt= 20 $TeV. Signals are generated with {\scshape Pythia}~8.230 ($p8$)~\cite{Sjostrand:2014zea} using the leading order cross-section from the generator.
+% /eos/experiment/fcc/helhc/utils/delphescards/helhc_v01/card.tcl
+% /eos/experiment/fcc/hh/utils/delphescards/fcc_v02/muonMomentumResolutionVsP.tcl
+Monte Carlo~(MC) simulated event samples were used to simulate the response of the DELPHES detector to signal and backgrounds. The muon momentum resolution is assumed to be $\sigma(p)/p \approx 6\%~(10\%)$ at $\pt= 2~(5)$ TeV and $|\eta| \approx 0.$ for FCC-hh (HE-LHC) scenario. Signals are generated with {\scshape Pythia}~8.230 ($p8$)~\cite{Sjostrand:2014zea} using the leading order cross-section from the generator.
 All lepton flavour decays of the $\ZpSSM$ are generated assuming universality of the couplings.
 The SM backgrounds are Drell-Yan, di-jet (QCD), top pairs (\ttbar), $VV$ and \vj\ where $V=W/Z$, which were generated using {\scshape MG5\_}a{\scshape MC@NLO}~2.5.2 ($mg$)~\cite{Alwall:2014hca} at leading order only. A k-factor of 2 is applied to all the background processes. \newline
-PYTHIA independent samples have been produced for Multi-Variate taggers training (section~\ref{subsec:mvatagger}). QCD has been produced to avoid useless events thnaks to a filtering chosen to ensure to have consistent leading jet $\pT$ as the signals considered (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6).\newline
+{\scshape Pythia} independent samples have been produced for Multi-Variate taggers training (section~\ref{subsec:mvatagger}). QCD has been produced to avoid useless events thanks to a filtering chosen to ensure to have consistent leading jet $\pT$ as the signals considered (pTHatMin = 2500, bias2Selection = on, bias2SelectionPow = 6).\newline
 Tables~\ref{tab:MCtable_bkgd} and ~\ref{tab:MCtable_sig} are summarising all the background and signal samples produced for the various analysis presented in this document.
 
 \begin{table}[!htb]\centering
@@ -66,29 +69,14 @@ mass : \{10,15,20,25,30,35,40,45,50\} TeV & & & \\
 \label{tab:MCtable_sig}
 \end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Fit model}
-Despite the fact that very large amount of Monte-Carlo statistic has been simulated in bins of $\hht$, there are still large statistical fluctuations from high weight events.
-In order to reduce this effect, a function is used to fit the background distribution,
-\begin{equation}
-f(z)=p_1(1-z)^{p_2}z^{p_3}z^{p_{4}logz}
-\end{equation}
-where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for the backgrounds, while the normalisation is taken prior to the fit (see figure~\ref{fig:hadronicresonances_nofit}).
-
-\begin{figure}[!htb]\centering
-\includegraphics[width=0.33\columnwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_sel8_nostack_log.eps}
-\includegraphics[width=0.33\columnwidth]{Fig/Zptt/Zptt_QCD_sel8_Mj1j2_pf08_MetCorr_fit.eps}
-\caption{Invariant mass prior to fit.}
-\label{fig:hadronicresonances_nofit}
-\end{figure}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detector parameterizations}
 \label{subsec:detparam}
 
 The FCC study group is using the Delphes software package to emulate the response a detector. 
-For the FCC one the baseline parameters are:
+For the FCC one the baseline parameters are: TBD
 We also consider two variations around it as well as the CMS configuration.
+Talk about how we use this same detector for HE-LHC with only energy change.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -194,9 +182,26 @@ In the same way, it can be used to compute the probability for inclusive $b$-tag
 \newline
 It was verify that the TRF methods agrees well with the direct tagging.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mass spectrum fit}
+Despite the fact that very large amount of Monte-Carlo statistic has been simulated in bins of $\hht$
+and the usage of techniques to save events with TRF methods,
+there are still large statistical fluctuations from high weight events.
+In order to reduce this effect, a function is used to fit the background distribution,
+\begin{equation}
+f(z)=p_1(1-z)^{p_2}z^{p_3}z^{p_{4}logz}
+\end{equation}
+where $z=m_{jj}/\sqrt{s}$. This fit is used in order to have a smooth shape for the backgrounds, while the normalisation is taken prior to the fit (see figure~\ref{fig:hadronicresonances_nofit}).
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=0.33\columnwidth]{Fig/Zptt/Mj1j2_pf08_MetCorr_sel8_nostack_log.eps}
+\includegraphics[width=0.33\columnwidth]{Fig/Zptt/Zptt_QCD_sel8_Mj1j2_pf08_MetCorr_fit.eps}
+\caption{Invariant mass prior to fit.}
+\label{fig:hadronicresonances_nofit}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limit settings}
 \label{subsec:limitsettings}
 
-
+Develop here ?
